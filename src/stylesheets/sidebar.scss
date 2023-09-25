@@ -9,6 +9,7 @@
   border-radius: 16px;
   min-width: utils.pxToRem(300px);
   max-width: utils.pxToRem(350px);
+  height: 100vh;
   .sidebar-nav{
     display: flex;
     flex-direction: column;
