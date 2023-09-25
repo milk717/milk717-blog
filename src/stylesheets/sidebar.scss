@@ -1,0 +1,69 @@
+@use 'utils';
+@use 'colors';
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: colors.$card-background;
+  border-radius: 16px;
+  min-width: utils.pxToRem(300px);
+  max-width: utils.pxToRem(350px);
+  .sidebar-nav{
+    display: flex;
+    flex-direction: column;
+    row-gap: utils.pxToRem(8px);
+    padding: utils.pxToRem(16px);
+    div{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 16px;
+      padding: utils.pxToRem(16px);
+      column-gap: utils.pxToRem(16px);
+      h1{
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        font-size: utils.pxToRem(18px);
+      }
+    }
+    .search{
+      background-color: colors.$input-background;
+      input{
+        border: none;
+        font-size: utils.pxToRem(18px);
+      }
+    }
+  }
+
+  .profile{
+    display: flex;
+    align-items: center;
+    column-gap: utils.pxToRem(16px);
+    background-color: colors.$card-point-background;
+    border-radius: 0 0 16px 16px;
+    padding: utils.pxToRem(16px);
+    img{
+      border-radius: 50%;
+      width: utils.pxToRem(60px);
+      height: utils.pxToRem(60px);
+    }
+    .profile-link{
+      display: flex;
+      flex-direction: column;
+      row-gap: utils.pxToRem(4px);
+      i{
+        font-style: normal;
+      }
+      .nickname{
+        font-weight: 600;
+        font-size: utils.pxToRem(18px);
+      }
+      .email {
+        font-size: utils.pxToRem(16px);
+      }
+    }
+  }
+}
