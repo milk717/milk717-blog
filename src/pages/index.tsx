@@ -2,13 +2,13 @@ import * as React from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
 import '../stylesheets/home-page.scss';
-import FeedCard from '../components/FeedCard';
+import FeedCardList from '../components/FeedCardList';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
     return (
         <main>
             {/*<SideBar />*/}
-            <FeedCard data={data} />
+            <FeedCardList data={data} />
         </main>
     );
 };
