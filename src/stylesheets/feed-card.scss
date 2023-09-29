@@ -1,0 +1,38 @@
+@use 'utils';
+@use 'colors';
+
+.feed-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: utils.pxToRem(16px);
+  border-radius: 16px;
+
+  img {
+    width: utils.pxToRem(300px);
+    border-radius: 16px;
+  }
+
+  .text-area {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+
+    i {
+      font-size: utils.pxToRem(20px);
+      color: colors.$text-sub;
+    }
+    i::before {
+      font-family: 'Font Awesome 5 Free', emoji;
+      content: '\f008';
+    }
+    h2{
+      font-size: utils.pxToRem(24px);
+      font-weight: 600;
+    }
+    p{
+      font-size: 1rem;
+      color: colors.$text-sub;
+    }
+  }
+}
