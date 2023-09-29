@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     faBars,
@@ -12,14 +12,22 @@ import '../stylesheets/sidebar.scss';
 import {Link} from 'gatsby';
 
 export default function SideBar() {
-    return (
+    const [sidebarVisibility, setSidebarVisibility] = useState(true);
+    const handleSidebarToggleButtonClick = () => {
+        setSidebarVisibility(!sidebarVisibility);
+    };
+
+    return sidebarVisibility ? (
         <div className="sidebar">
             <nav className="sidebar-nav">
                 <div className="header">
-                    <FontAwesomeIcon icon={faBars} />
+                    <FontAwesomeIcon
+                        icon={faBars}
+                        onClick={handleSidebarToggleButtonClick}
+                    />
                     <h1>Milk717 Blog</h1>
                 </div>
-                <div className="item search">
+                <div className="search">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                     <input type="text" placeholder="Search..." />
                 </div>
@@ -50,6 +58,14 @@ export default function SideBar() {
                     <i className="email">robolindasoo@gmail.com</i>
                 </div>
             </div>
+        </div>
+    ) : (
+        <div className="sidebar-toggle">
+            <button
+                className="toggle-btn"
+                onClick={handleSidebarToggleButtonClick}>
+                <FontAwesomeIcon icon={faBars} className="icon" />
+            </button>
         </div>
     );
 }
