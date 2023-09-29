@@ -4,7 +4,6 @@ import '../stylesheets/feed-card.scss';
 
 export default function FeedCard({data}: PageProps<Queries.BlogPostListQuery>) {
     const posts = data.allMarkdownRemark.edges;
-    console.log(posts);
     return posts.map(({node: {frontmatter}}) => (
         <div className="feed-card">
             <img
