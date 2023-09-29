@@ -18,13 +18,18 @@
     flex-direction: column;
     row-gap: utils.pxToRem(8px);
     padding: utils.pxToRem(16px);
-    div{
+    .item, .header{
       display: flex;
       justify-content: flex-start;
       align-items: center;
       border-radius: 16px;
       padding: utils.pxToRem(16px);
       column-gap: utils.pxToRem(16px);
+      text-decoration: none;
+      color: colors.$text-default;
+      &:visited{
+        color: colors.$text-default;
+      }
       p {
         font-size: utils.pxToRem(18px);
       }

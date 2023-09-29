@@ -1,44 +1,44 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     faBars,
-    faMagnifyingGlass,
-    faHome,
+    faCircleInfo,
     faFolder,
+    faHome,
+    faMagnifyingGlass,
     faTags,
-   faCircleInfo
-} from "@fortawesome/free-solid-svg-icons";
-import '../stylesheets/sidebar.scss'
-import {StaticImage} from "gatsby-plugin-image";
+} from '@fortawesome/free-solid-svg-icons';
+import '../stylesheets/sidebar.scss';
+import {Link} from 'gatsby';
 
-export default function SideBar(){
-    return(
+export default function SideBar() {
+    return (
         <div className="sidebar">
-            <nav className='sidebar-nav'>
+            <nav className="sidebar-nav">
                 <div className="header">
                     <FontAwesomeIcon icon={faBars} />
                     <h1>Milk717 Blog</h1>
                 </div>
-                <div className="search">
+                <div className="item search">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    <input type="text" placeholder="Search..."/>
+                    <input type="text" placeholder="Search..." />
                 </div>
-                <div className="home">
+                <Link className="item home" to="/">
                     <FontAwesomeIcon icon={faHome} />
                     <p>Home</p>
-                </div>
-                <div className="categories">
+                </Link>
+                <Link className="item categories" to="/about">
                     <FontAwesomeIcon icon={faFolder} />
                     <p>Categories</p>
-                </div>
-                <div className="tags">
+                </Link>
+                <Link className="item tags" to="/tag">
                     <FontAwesomeIcon icon={faTags} />
                     <p>Tags</p>
-                </div>
-                <div className="info">
+                </Link>
+                <Link className="item info" to="/info">
                     <FontAwesomeIcon icon={faCircleInfo} />
                     <p>Info</p>
-                </div>
+                </Link>
             </nav>
             <div className="profile">
                 <img
@@ -51,5 +51,5 @@ export default function SideBar(){
                 </div>
             </div>
         </div>
-    )
+    );
 }
