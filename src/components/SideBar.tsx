@@ -27,7 +27,7 @@ export default function SideBar() {
                     <FontAwesomeIcon icon={faHome} />
                     <p>Home</p>
                 </Link>
-                <Link className="item categories" to="/about">
+                <Link className="item categories" to="/category">
                     <FontAwesomeIcon icon={faFolder} />
                     <p>Categories</p>
                 </Link>
