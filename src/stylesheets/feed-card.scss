@@ -1,6 +1,13 @@
 @use 'utils';
 @use 'colors';
 
+.feed-card-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%,auto));
+  gap: 16px;
+  padding: utils.pxToRem(16px);
+}
+
 .feed-card {
   display: flex;
   flex-direction: column;
@@ -9,8 +16,8 @@
   border-radius: 16px;
 
   img {
-    width: utils.pxToRem(300px);
     border-radius: 16px;
+    object-fit: contain;
   }
 
   .text-area {
@@ -21,10 +28,6 @@
     i {
       font-size: utils.pxToRem(20px);
       color: colors.$text-sub;
-    }
-    i::before {
-      font-family: 'Font Awesome 5 Free', emoji;
-      content: '\f008';
     }
     h2{
       font-size: utils.pxToRem(24px);

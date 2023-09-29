@@ -3,12 +3,15 @@ import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
 import '../stylesheets/home-page.scss';
 import FeedCardList from '../components/FeedCardList';
+import SideBar from '../components/SideBar';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
     return (
         <main>
-            {/*<SideBar />*/}
-            <FeedCardList data={data} />
+            <SideBar />
+            <div className="content-area">
+                <FeedCardList data={data} />
+            </div>
         </main>
     );
 };
