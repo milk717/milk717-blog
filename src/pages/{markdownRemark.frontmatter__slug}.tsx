@@ -4,11 +4,11 @@ import {graphql, PageProps} from 'gatsby';
 const BlogPostTemplate = ({
     data: {markdownRemark},
 }: PageProps<Queries.BlogPostQuery>) => {
-    const {html} = markdownRemark;
+    const html = markdownRemark?.html;
     return (
         <div>
             <div>
-                <div dangerouslySetInnerHTML={{__html: html}} />
+                <div dangerouslySetInnerHTML={{__html: html ?? ''}} />
             </div>
         </div>
     );

@@ -1,14 +1,11 @@
 import React from 'react';
-import {PageProps} from 'gatsby';
 import '../stylesheets/feed-card.scss';
 
-export default function FeedCardList({
-    data,
-}: PageProps<Queries.BlogPostListQuery>) {
-    const posts = data.allMarkdownRemark.edges;
+const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
+    const posts = data.allMarkdownRemark?.edges;
     return (
         <div className="feed-card-list">
-            {posts.map(({node: {frontmatter}}) => (
+            {posts?.map(({node: {frontmatter}}) => (
                 <div className="feed-card">
                     <img
                         src="https://post-phinf.pstatic.net/MjAyMjExMTdfNzYg/MDAxNjY4NjUwMTQxMzU2.KOS5Iab6G0-88otScR2vsaZmoimqN8v-b5QiMhSkj5og.qsrQszwww-AZFP32Vs0gfJpqYp4tWpaXQYRupweSlOMg.JPEG/1633c62db4f2af416b327f14ce3c3100.jpg?type=w800_q75"
@@ -23,4 +20,6 @@ export default function FeedCardList({
             ))}
         </div>
     );
-}
+};
+
+export default FeedCardList;
