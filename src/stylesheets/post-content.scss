@@ -24,11 +24,12 @@
     }
     .gatsby-code-title{
       position: relative;
-      top: 20px;
-      left: 4px;
+      top: 0.3rem;
+      left: 0;
     }
     deckgo-highlight-code{
-      margin: 1.5rem 0;
+      margin: 0.5rem 0;
+      box-shadow: none;
     }
   }
 }
