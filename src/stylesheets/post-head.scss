@@ -1,0 +1,36 @@
+@use 'colors';
+
+.post-title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  .properties {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+    .item {
+      display: grid;
+      grid-template-columns: 120px 0.7fr;
+      column-gap: 4px;
+      .category{
+        padding: 4px 12px;
+      }
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+    }
+    .tags-item {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      p {
+        background-color: colors.$card-point-background;
+        border-radius: 1rem;
+        padding: 4px 12px;
+      }
+    }
+  }
+}

@@ -1,15 +1,23 @@
 import * as React from 'react';
 import {graphql, PageProps} from 'gatsby';
 import Layout from '../components/Layout';
+import '../stylesheets/post-content.scss';
+import PostHead from '../components/PostHead';
 
 const BlogPostTemplate = ({
     data: {markdownRemark},
 }: PageProps<Queries.BlogPostQuery>) => {
     const html = markdownRemark?.html;
+    const {title, category, tags} = markdownRemark?.frontmatter!;
     return (
         <Layout>
-            <div>
-                <div dangerouslySetInnerHTML={{__html: html ?? ''}} />
+            <div className="post-page">
+                <PostHead title={title} category={category} tags={tags} />
+                <hr />
+                <div
+                    className="content"
+                    dangerouslySetInnerHTML={{__html: html ?? ''}}
+                />
             </div>
         </Layout>
     );
@@ -20,6 +28,11 @@ export const pageQuery = graphql`
     query BlogPost($id: String!) {
         markdownRemark(id: {eq: $id}) {
             html
+            frontmatter {
+                title
+                category
+                tags
+            }
         }
     }
 `;

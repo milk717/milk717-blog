@@ -1,0 +1,20 @@
+@use 'colors';
+
+.post-page{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem;
+  max-width: 900px;
+  hr{
+    border: 2px solid colors.$card-point-background;
+    border-radius: 4px;
+  }
+  .content{
+    //display: flex;
+    //flex-direction: column;
+    p{
+      line-height: 1.5rem;
+    }
+  }
+}
