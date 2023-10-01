@@ -1,7 +1,12 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
 const TagPage = () => {
-    return <h1>Tag</h1>;
+    return (
+        <Layout>
+            <h1>tag</h1>
+        </Layout>
+    );
 };
 
 export default TagPage;

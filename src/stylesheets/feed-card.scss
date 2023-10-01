@@ -14,6 +14,7 @@
   justify-content: center;
   row-gap: utils.pxToRem(16px);
   border-radius: 16px;
+  text-decoration: none;
 
   img {
     border-radius: 16px;
@@ -25,13 +26,10 @@
     flex-direction: column;
     row-gap: 4px;
 
-    i {
-      font-size: utils.pxToRem(20px);
-      color: colors.$text-sub;
-    }
     h2{
       font-size: utils.pxToRem(24px);
       font-weight: 600;
+      color: colors.$text-default;
     }
     p{
       font-size: 1rem;

@@ -1,7 +1,12 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
 const InfoPage = () => {
-    return <h1>Info</h1>;
+    return (
+        <Layout>
+            <h1>info</h1>
+        </Layout>
+    );
 };
 
 export default InfoPage;

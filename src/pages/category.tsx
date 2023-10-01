@@ -1,7 +1,12 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
 const CategoryPage = () => {
-    return <h1>About</h1>;
+    return (
+        <Layout>
+            <h1>카테고리</h1>
+        </Layout>
+    );
 };
 
 export default CategoryPage;

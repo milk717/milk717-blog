@@ -1,18 +1,14 @@
 import * as React from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
-import '../stylesheets/home-page.scss';
 import FeedCardList from '../components/FeedCardList';
-import SideBar from '../components/SideBar';
+import Layout from '../components/Layout';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
     return (
-        <main>
-            <SideBar />
-            <div className="content-area">
-                <FeedCardList data={data} />
-            </div>
-        </main>
+        <Layout>
+            <FeedCardList data={data} />
+        </Layout>
     );
 };
 
@@ -25,6 +21,7 @@ export const query = graphql`
                 node {
                     id
                     frontmatter {
+                        slug
                         title
                         date(formatString: "YYYY-MM-DD")
                         category

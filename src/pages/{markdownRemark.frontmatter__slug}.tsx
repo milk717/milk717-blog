@@ -1,16 +1,17 @@
 import * as React from 'react';
 import {graphql, PageProps} from 'gatsby';
+import Layout from '../components/Layout';
 
 const BlogPostTemplate = ({
     data: {markdownRemark},
 }: PageProps<Queries.BlogPostQuery>) => {
     const html = markdownRemark?.html;
     return (
-        <div>
+        <Layout>
             <div>
                 <div dangerouslySetInnerHTML={{__html: html ?? ''}} />
             </div>
-        </div>
+        </Layout>
     );
 };
 export default BlogPostTemplate;
