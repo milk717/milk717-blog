@@ -23,6 +23,12 @@ const config: GatsbyConfig = {
             options: {
                 plugins: [
                     {
+                        resolve: 'gatsby-remark-code-titles',
+                        options: {
+                            className: 'code-title',
+                        },
+                    },
+                    {
                         resolve: `gatsby-remark-highlight-code`,
                         options: {
                             terminal: 'carbon',
