@@ -13,8 +13,17 @@
   .content{
     //display: flex;
     //flex-direction: column;
+    h1,h2 {
+      margin: 1rem 0;
+    }
+    h3, h4, h5, h6{
+      margin: 0.5rem 0;
+    }
     p{
-      line-height: 1.5rem;
+      line-height: 1.6rem;
+    }
+    deckgo-highlight-code{
+      margin: 1.5rem 0;
     }
   }
 }

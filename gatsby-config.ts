@@ -20,7 +20,18 @@ const config: GatsbyConfig = {
         },
         {
             resolve: `gatsby-transformer-remark`,
-            options: {},
+            options: {
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-highlight-code`,
+                        options: {
+                            terminal: 'carbon',
+                            theme: 'one-dark',
+                            lineNumbers: true,
+                        },
+                    },
+                ],
+            },
         },
     ],
 };

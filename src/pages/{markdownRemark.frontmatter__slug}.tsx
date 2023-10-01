@@ -3,7 +3,9 @@ import {graphql, PageProps} from 'gatsby';
 import Layout from '../components/Layout';
 import '../stylesheets/post-content.scss';
 import PostHead from '../components/PostHead';
+import {defineCustomElements as deckDeckGoHighlightElement} from '@deckdeckgo/highlight-code/dist/loader';
 
+deckDeckGoHighlightElement();
 const BlogPostTemplate = ({
     data: {markdownRemark},
 }: PageProps<Queries.BlogPostQuery>) => {
