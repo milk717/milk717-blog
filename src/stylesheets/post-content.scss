@@ -1,33 +1,49 @@
 @use 'colors';
 
-.post-page{
+.post-page {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
   padding: 2rem;
   max-width: 900px;
-  hr{
-    border: 2px solid colors.$card-point-background;
+
+  hr {
+    border: 1px solid colors.$text-highLight;
     border-radius: 4px;
   }
-  .content{
-    //display: flex;
-    //flex-direction: column;
-    h1,h2 {
+
+  .content {
+    h1, h2 {
       margin: 1rem 0;
     }
-    h3, h4, h5, h6{
+
+    h3, h4, h5, h6 {
       margin: 0.5rem 0;
+      color: colors.$text-highLight
     }
-    p{
+
+    p {
       line-height: 1.6rem;
+      color: colors.$text-default;
     }
-    .gatsby-code-title{
+
+    li{
+      margin: 8px 0;
+    }
+
+    code{
+      background-color: colors.$text-code-background;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .gatsby-code-title {
       position: relative;
       top: 0.3rem;
       left: 0;
     }
-    deckgo-highlight-code{
+
+    deckgo-highlight-code {
       margin: 0.5rem 0;
       box-shadow: none;
     }
@@ -35,8 +51,22 @@
 }
 
 table {
-  border-collapse: collapse;
-}
-thead{
-  background-color: colors.$card-point-background;
+  min-width: 100%;
+  overflow-x: auto;
+  border-spacing: 0;
+  th, td {
+    padding: 8px;
+  }
+  thead {
+    background-color: colors.$table-head-background;
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid var(--tb-border-color);
+
+      &:nth-child(2n) {
+        background-color: colors.$table-body-background;
+      }
+    }
+  }
 }
