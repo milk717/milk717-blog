@@ -8,7 +8,7 @@ import {
     faMagnifyingGlass,
     faTags,
 } from '@fortawesome/free-solid-svg-icons';
-import '../stylesheets/sidebar.scss';
+import './sidebar.scss';
 import {Link} from 'gatsby';
 
 export default function SideBar() {

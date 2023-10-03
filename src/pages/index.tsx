@@ -1,8 +1,8 @@
 import * as React from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
-import FeedCardList from '../components/FeedCardList';
-import Layout from '../components/Layout';
+import FeedCardList from '../components/feedCardList/FeedCardList';
+import Layout from '../components/layout/Layout';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
     return (

@@ -1,5 +1,5 @@
-@use 'utils';
-@use 'colors';
+@use '../../stylesheets/utils';
+@use '../../stylesheets/colors';
 
 .feed-card-list{
   display: grid;

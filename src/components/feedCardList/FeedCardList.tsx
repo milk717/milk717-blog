@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/feed-card.scss';
+import './feed-card.scss';
 import {Link} from 'gatsby';
 
 const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
