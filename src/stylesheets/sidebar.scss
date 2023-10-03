@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: colors.$card-background;
-  border-radius: 16px;
+  border-radius: 0 16px 16px 0;
   min-width: utils.pxToRem(300px);
   max-width: utils.pxToRem(350px);
   height: 100vh;
@@ -17,6 +17,9 @@
     flex-direction: column;
     row-gap: utils.pxToRem(8px);
     padding: utils.pxToRem(16px);
+    h1{
+      color: colors.$text-highLight;
+    }
     .item, .search, .header{
       display: flex;
       justify-content: flex-start;
@@ -25,7 +28,6 @@
       padding: utils.pxToRem(16px);
       column-gap: utils.pxToRem(16px);
       text-decoration: none;
-      color: colors.$text-default;
       &:visited{
         color: colors.$text-default;
       }
@@ -33,8 +35,18 @@
         font-size: utils.pxToRem(18px);
       }
     }
+    .item{
+      box-shadow: none;
+      transition: box-shadow 0.3s ease-out;
+      p{
+        color: colors.$text-sub;
+      }
+    }
     .item:hover{
-      background-color: colors.$card-point-background;
+      p{
+        color: colors.$text-highLight;
+      }
+      box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.27);
     }
     .search{
       background-color: colors.$input-background;
@@ -50,7 +62,8 @@
     align-items: center;
     column-gap: utils.pxToRem(16px);
     background-color: colors.$card-point-background;
-    border-radius: 0 0 16px 16px;
+    color: colors.$text-bright;
+    border-radius: 0 0 16px 0;
     padding: utils.pxToRem(16px);
     img{
       border-radius: 50%;
@@ -84,7 +97,6 @@
     background-color: colors.$card-background;
     &:hover{
       background-color: colors.$card-point-background;
-
     }
   }
 }

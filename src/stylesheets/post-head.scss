@@ -27,7 +27,8 @@
       align-items: center;
       column-gap: 0.5rem;
       p {
-        background-color: colors.$card-point-background;
+        background-color: colors.$color-chip;
+        color: colors.$color-chip-text;
         border-radius: 1rem;
         padding: 4px 12px;
       }
