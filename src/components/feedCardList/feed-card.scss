@@ -8,7 +8,6 @@
   align-items: stretch;
   justify-content: stretch;
   padding: utils.pxToRem(16px);
-  max-width: 900px;
   margin: 0 auto;
 
   .feed-card {
@@ -17,7 +16,7 @@
     justify-content: stretch;
     row-gap: utils.pxToRem(8px);
     border-radius: 8px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 
     img {
       border-radius: 8px 8px 0 0;

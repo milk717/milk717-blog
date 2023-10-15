@@ -1,0 +1,14 @@
+@use '../../../stylesheets/colors';
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 16px;
+
+  hr {
+    border: 0.5px solid colors.$text-bright;
+    border-radius: 4px;
+    margin: 0 4px;
+  }
+}

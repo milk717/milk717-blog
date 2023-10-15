@@ -1,11 +1,12 @@
 import * as React from 'react';
 import {graphql, PageProps} from 'gatsby';
 import Layout from '../components/layout/Layout';
-import '../stylesheets/post-content.scss';
-import PostHead from '../components/PostHead/PostHead';
-import {defineCustomElements as deckDeckGoHighlightElement} from '@deckdeckgo/highlight-code/dist/loader';
+import PostHead from '../components/post/PostHead/PostHead';
+import {defineCustomElements} from '@deckdeckgo/highlight-code/dist/loader';
+import {PostContent} from '../components/post/postContent/PostContent';
+import {PostBody} from '../components/post/postBody/PostBody';
 
-deckDeckGoHighlightElement();
+defineCustomElements();
 const BlogPostTemplate = ({
     data: {markdownRemark},
 }: PageProps<Queries.BlogPostQuery>) => {
@@ -13,14 +14,11 @@ const BlogPostTemplate = ({
     const {title, category, tags} = markdownRemark?.frontmatter!;
     return (
         <Layout>
-            <div className="post-page">
+            <PostContent>
                 <PostHead title={title} category={category} tags={tags} />
                 <hr />
-                <div
-                    className="content"
-                    dangerouslySetInnerHTML={{__html: html ?? ''}}
-                />
-            </div>
+                <PostBody html={html ?? ''} />
+            </PostContent>
         </Layout>
     );
 };
