@@ -1,6 +1,8 @@
 import React from 'react';
 import './feed-card.scss';
 import {Link} from 'gatsby';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faFolder} from '@fortawesome/free-solid-svg-icons';
 
 const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
     const posts = data.allMarkdownRemark?.edges;
@@ -12,11 +14,14 @@ const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
                     key={node.id}
                     to={node.frontmatter?.slug ?? '/404'}>
                     <img
-                        src="https://post-phinf.pstatic.net/MjAyMjExMTdfNzYg/MDAxNjY4NjUwMTQxMzU2.KOS5Iab6G0-88otScR2vsaZmoimqN8v-b5QiMhSkj5og.qsrQszwww-AZFP32Vs0gfJpqYp4tWpaXQYRupweSlOMg.JPEG/1633c62db4f2af416b327f14ce3c3100.jpg?type=w800_q75"
+                        src="https://validuspharma.com/wp-content/uploads/2019/06/nologo.png"
                         alt="썸네일 이미지"
                     />
                     <div className="text-area">
-                        <p>{node.frontmatter?.category}</p>
+                        <div className="category">
+                            <FontAwesomeIcon icon={faFolder} />
+                            <p>{node.frontmatter?.category}</p>
+                        </div>
                         <h2>{node.frontmatter?.title}</h2>
                         <p>{node.frontmatter?.date}</p>
                     </div>
