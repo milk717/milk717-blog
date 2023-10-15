@@ -4,6 +4,10 @@ const config: GatsbyConfig = {
     siteMetadata: {
         title: `Milk717 Blog`,
         siteUrl: `https://www.yourdomain.tld`,
+        username: 'milk717',
+        githubUrl: 'https://github.com/milk717',
+        email: 'robolindasoo@gmail.com',
+        linkedIn: `https://www.linkedin.com/in/%EC%88%98%EB%AF%BC-%EA%B9%80-975393287`,
     },
     // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
     // If you use VSCode you can also use the GraphQL plugin

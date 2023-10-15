@@ -1,26 +1,27 @@
 @use '../../stylesheets/utils';
 @use '../../stylesheets/colors';
 
-.sidebar{
+.sidebar {
   position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: colors.$card-background;
-  border-radius: 0 16px 16px 0;
+  justify-content: center;
   min-width: utils.pxToRem(300px);
   max-width: utils.pxToRem(350px);
   height: 100vh;
-  .sidebar-nav{
+
+  .sidebar-nav {
     display: flex;
     flex-direction: column;
     row-gap: utils.pxToRem(8px);
     padding: utils.pxToRem(16px);
-    h1{
+
+    h1 {
       color: colors.$text-highLight;
     }
-    .item, .search, .header{
+
+    .item, .search, {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -28,69 +29,56 @@
       padding: utils.pxToRem(16px);
       column-gap: utils.pxToRem(16px);
       text-decoration: none;
-      &:visited{
+
+      &:visited {
         color: colors.$text-default;
       }
+
       p {
         font-size: utils.pxToRem(18px);
       }
     }
-    .item{
+
+    .item {
       box-shadow: none;
       transition: box-shadow 0.3s ease-out;
     }
-    .item:hover{
+
+    .item:hover {
       box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.27);
     }
-    .search{
+
+    .search {
       background-color: colors.$input-background;
-      input{
+
+      input {
         border: none;
         font-size: utils.pxToRem(18px);
       }
     }
   }
 
-  .profile{
+  .profile {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    column-gap: utils.pxToRem(16px);
-    background-color: colors.$card-point-background;
-    color: colors.$text-bright;
+    row-gap: utils.pxToRem(16px);
     border-radius: 0 0 16px 0;
     padding: utils.pxToRem(16px);
-    img{
-      border-radius: 50%;
-      width: utils.pxToRem(60px);
-      height: utils.pxToRem(60px);
-    }
-    .profile-link{
-      display: flex;
-      flex-direction: column;
-      row-gap: utils.pxToRem(4px);
-      .nickname{
-        font-weight: 600;
-        font-size: utils.pxToRem(18px);
-      }
-      .email {
-        font-size: utils.pxToRem(16px);
-      }
-    }
-  }
-}
 
-.sidebar-toggle{
-  display: flex;
-  flex-direction: column;
-  margin: utils.pxToRem(16px) 0;
-  .toggle-btn{
-    position: sticky;
-    top: 16px;
-    border-radius: 0 8px 8px 0;
-    padding: utils.pxToRem(16px);
-    background-color: colors.$card-background;
-    &:hover{
-      background-color: colors.$card-point-background;
+    img {
+      border-radius: 50%;
+      width: utils.pxToRem(150px);
+      height: utils.pxToRem(150px);
+    }
+    .nickname {
+      font-weight: 600;
+      font-size: utils.pxToRem(18px);
+    }
+
+    .profile-link {
+      display: flex;
+      column-gap: 8px;
     }
   }
 }

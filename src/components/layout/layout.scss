@@ -1,9 +1,8 @@
 .layout{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .content-area{
-  flex-grow: 1;
   flex-shrink: 1;
 }
