@@ -6,6 +6,7 @@ category: "Javascript"
 tags:
   - "Javascript"
   - "정규표현식"
+thumbnail: "./thumbnail.png"
 ---
 
 # 정규표현식 Tips

@@ -1,4 +1,9 @@
 import type {GatsbyConfig} from 'gatsby';
+import dotenv from 'dotenv';
+
+dotenv.config({
+    path: `.env`,
+});
 
 const config: GatsbyConfig = {
     siteMetadata: {
@@ -15,6 +20,9 @@ const config: GatsbyConfig = {
     graphqlTypegen: true,
     plugins: [
         'gatsby-plugin-sass',
+        'gatsby-transformer-sharp',
+        'gatsby-plugin-sharp',
+        `gatsby-plugin-image`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {

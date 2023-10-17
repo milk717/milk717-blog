@@ -3,9 +3,11 @@ import './feed-card.scss';
 import {Link} from 'gatsby';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFolder} from '@fortawesome/free-solid-svg-icons';
+import {GatsbyImage} from 'gatsby-plugin-image';
 
 const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
     const posts = data.allMarkdownRemark?.edges;
+
     return (
         <div className="feed-card-list">
             {posts?.map(({node}) => (
@@ -13,10 +15,16 @@ const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
                     className="feed-card"
                     key={node.id}
                     to={node.frontmatter?.slug ?? '/404'}>
-                    <img
-                        src="https://validuspharma.com/wp-content/uploads/2019/06/nologo.png"
-                        alt="썸네일 이미지"
-                    />
+                    {node.frontmatter?.thumbnail?.childImageSharp
+                        ?.gatsbyImageData && (
+                        <GatsbyImage
+                            image={
+                                node.frontmatter.thumbnail.childImageSharp
+                                    .gatsbyImageData
+                            }
+                            alt="썸네일 이미지"
+                        />
+                    )}
                     <div className="text-area">
                         <div className="category">
                             <FontAwesomeIcon icon={faFolder} />

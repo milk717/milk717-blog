@@ -25,6 +25,11 @@ export const query = graphql`
                         title
                         date(formatString: "YYYY-MM-DD")
                         category
+                        thumbnail {
+                            childImageSharp {
+                                gatsbyImageData
+                            }
+                        }
                     }
                     excerpt
                 }
@@ -32,4 +37,5 @@ export const query = graphql`
         }
     }
 `;
+
 export const Head: HeadFC = () => <title>Home Page</title>;
