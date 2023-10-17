@@ -6,6 +6,7 @@
 
 body{
   background-color: colors.$background;
+  max-width: 80vw;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -21,7 +22,17 @@ button{
   background: inherit;
   padding: 0;
 }
+
 a{
   text-decoration: none;
   color: inherit;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  display: block;
+}
+
+ul, li {
+  white-space: normal;
+  overflow-wrap: break-word;
 }
