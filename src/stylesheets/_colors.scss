@@ -1,0 +1,44 @@
+$card-background: #e5e5e5;
+$card-point-background: #404040;
+$color-chip: #c9c9c9;
+$color-chip-text: #282828;
+$input-background: #FFFFFF;
+$text-default: rgb(95, 95, 95);
+$text-highLight: #454545;
+$text-bright: #ededed;
+$text-sub: #7d7d7d;
+$text-code-background: #dbdbdb;
+$table-head-background: #d5d5d5;
+$table-body-background: #f3f3f3;
+
+// Text Colors
+$sub-text: #888888;
+$plain-text: #181919;
+$selected-text: #FFFFFF;
+
+// Background Colors
+$background-default: #F1F3F9;
+$callout-warning-background: #FBF2EB;
+$callout-error-background: #FBEDEF;
+$callout-tip-background: #EFF8F8;
+$callout-info-background: #ECF1FA;
+
+// Typography Colors
+$color-h1: #1A3B70;
+$color-h2: #2C4C8A;
+$color-h3: #357ABD;
+$color-h4: #C69B5B;
+$color-h5: #D65D87;
+$color-h6: #8A9CB2;
+$color-p: #4A4A4A;
+
+// Callout Text Colors
+$callout-info-text: $color-h3;
+$callout-tip-text: #56BCBB;
+$callout-warning-text: #DD7B2E;
+$callout-error-text: $color-h5;
+
+// Gradient Colors
+$item-background: linear-gradient(90deg, rgba(43, 88, 118, 0.90) 11.46%, rgba(78, 67, 118, 0.90) 75.52%);
+$hover-background: linear-gradient(90deg, rgba(69, 104, 220, 0.75) 0%, rgba(176, 106, 179, 0.75) 100%);
+$background: linear-gradient(113deg, $background-default 0%, rgba(212, 223, 255, 0.81) 53.41%, $background-default 100%);

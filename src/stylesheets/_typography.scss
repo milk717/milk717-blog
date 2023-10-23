@@ -1,0 +1,35 @@
+@use "theme" as theme;
+
+@mixin typography($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+h1 {
+  @include typography(40px, 700, theme.$color-h1);
+}
+
+h2 {
+  @include typography(32px, 700, theme.$color-h2);
+}
+
+h3 {
+  @include typography(28px, 600, theme.$color-h3);
+}
+
+h4 {
+  @include typography(24px, 600, theme.$color-h4);
+}
+
+h5 {
+  @include typography(20px, 600, theme.$color-h5);
+}
+
+h6 {
+  @include typography(16px, 600, theme.$color-h6);
+}
+
+p {
+  @include typography(16px, 400, theme.$color-p);
+}
