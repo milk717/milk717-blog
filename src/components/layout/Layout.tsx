@@ -5,12 +5,15 @@ import {Children} from '../../types/common';
 
 const Layout: FC<Children> = ({children}) => {
     return (
-        <div className="layout">
-            <div className="sidebar-area">
-                <SideBar />
+        <>
+            <div className="cover"></div>
+            <div className="layout">
+                <div className="sidebar-area">
+                    <SideBar />
+                </div>
+                <main className="content-area">{children}</main>
             </div>
-            <main className="content-area">{children}</main>
-        </div>
+        </>
     );
 };
 
