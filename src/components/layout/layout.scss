@@ -1,13 +1,24 @@
+@use "../../stylesheets/theme" as theme;
+
+$area-gap: 1.75rem;
+
 .layout{
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  @media (max-width: 1180px) {
-    grid-template-columns: 1fr;
-  }
+
 }
 
-.content-area{
-  //flex: 0 1;
+.sidebar-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100% - calc($area-gap * 4));
+  width: 350px;
+  padding-top: $area-gap;
+  padding-left: $area-gap;
+}
+
+.content-area {
   display: flex;
   max-width: 900px;
+  margin-top: theme.pxToRem(32px);
+  margin-left: calc(calc($area-gap * 2) + 350px);
 }

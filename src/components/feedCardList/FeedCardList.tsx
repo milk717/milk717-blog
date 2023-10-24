@@ -22,15 +22,20 @@ const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
                                 node.frontmatter.thumbnail.childImageSharp
                                     .gatsbyImageData
                             }
+                            className="feed-thumbnail"
                             alt="썸네일 이미지"
                         />
                     )}
                     <div className="text-area">
-                        <div className="category">
-                            <FontAwesomeIcon icon={faFolder} />
-                            <p>{node.frontmatter?.category}</p>
+                        <div className="text-area-top">
+                            <div className="category">
+                                <FontAwesomeIcon icon={faFolder} />
+                                <p>{node.frontmatter?.category}</p>
+                            </div>
+                            <p className="post-title">
+                                {node.frontmatter?.title}
+                            </p>
                         </div>
-                        <h2>{node.frontmatter?.title}</h2>
                         <p>{node.frontmatter?.date}</p>
                     </div>
                 </Link>

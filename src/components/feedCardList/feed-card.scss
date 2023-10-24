@@ -1,24 +1,22 @@
-@use '../../stylesheets/utils';
-@use '../../stylesheets/colors';
+@use '../../stylesheets/_theme' as theme;
 
 .feed-card-list{
   display: grid;
   gap: 16px;
+  align-items: stretch;
   grid-template-columns: repeat(3, 1fr);
-  align-items: flex-start;
-  justify-content: stretch;
-  padding: utils.pxToRem(16px);
   margin: 0 auto;
 
   .feed-card {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    row-gap: utils.pxToRem(8px);
+    row-gap: theme.pxToRem(8px);
     border-radius: 8px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: theme.$background-default;
 
-    img {
+    .feed-thumbnail {
+      height: 250px;
       border-radius: 8px 8px 0 0;
       object-fit: cover;
       max-width: 100%;
@@ -27,24 +25,33 @@
     .text-area {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       row-gap: 4px;
       padding: 4px 8px 8px 8px;
+      //height: 120px;
+
+      p{
+        color: theme.$sub-text;
+      }
+
+      .text-area-top{
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+      }
+
+      .post-title{
+        font-size: 18px;
+        font-weight: 500;
+        color: theme.$color-p;
+      }
 
       .category{
         display: flex;
         column-gap: 4px;
         align-items: center;
         text-decoration: none;
-      }
-
-      h2{
-        font-size: utils.pxToRem(22px);
-        font-weight: 600;
-        color: colors.$text-default;
-      }
-      p{
-        font-size: 1rem;
-        color: colors.$text-sub;
+        font-size: 16px;
       }
     }
   }

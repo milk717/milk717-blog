@@ -1,42 +1,28 @@
-@use '../../stylesheets/utils';
-@use '../../stylesheets/colors';
+@use "../../stylesheets/_theme" as theme;
 
 .sidebar {
-  position: sticky;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-width: utils.pxToRem(300px);
-  max-width: utils.pxToRem(350px);
-  height: 100vh;
+  justify-content: space-evenly;
+  padding: 24px;
+  height:100%;
+  @include theme.surface;
 
   .sidebar-nav {
     display: flex;
     flex-direction: column;
-    row-gap: utils.pxToRem(8px);
-    padding: utils.pxToRem(16px);
-
-    h1 {
-      color: colors.$text-highLight;
-    }
+    row-gap: 8px;
 
     .item, .search, {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       border-radius: 16px;
-      padding: utils.pxToRem(16px);
-      column-gap: utils.pxToRem(16px);
-      text-decoration: none;
-
-      &:visited {
-        color: colors.$text-default;
-      }
-
+      padding: 16px;
+      column-gap: 16px;
+      color: theme.$plain-text;
       p {
-        font-size: utils.pxToRem(18px);
+        font-size: 18px;
       }
     }
 
@@ -46,15 +32,18 @@
     }
 
     .item:hover {
-      box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.27);
+      background-color: theme.$background-point;
+    }
+
+    .selected{
+      @include theme.hovered-item;
     }
 
     .search {
-      background-color: colors.$input-background;
-
       input {
         border: none;
-        font-size: utils.pxToRem(18px);
+        font-size: theme.pxToRem(18px);
+        background: none;
       }
     }
   }
@@ -63,18 +52,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: utils.pxToRem(16px);
+    row-gap: theme.pxToRem(16px);
     border-radius: 0 0 16px 0;
-    padding: utils.pxToRem(16px);
+    padding: theme.pxToRem(16px);
 
     img {
       border-radius: 50%;
-      width: utils.pxToRem(150px);
-      height: utils.pxToRem(150px);
+      width: theme.pxToRem(150px);
+      height: theme.pxToRem(150px);
     }
+
     .nickname {
       font-weight: 600;
-      font-size: utils.pxToRem(18px);
+      font-size: theme.pxToRem(18px);
     }
 
     .profile-link {

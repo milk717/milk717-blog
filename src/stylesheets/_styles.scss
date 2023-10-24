@@ -1,0 +1,14 @@
+@use "colors";
+
+
+
+@mixin surface{
+  box-shadow: 0 8px 32px 0 colors.$surface-default-shadow;
+  background: colors.$surface-default-background;
+  border-radius: 16px;
+}
+
+@mixin hovered-item{
+  box-shadow: 0 8px 32px 0 colors.$surface-default-shadow;
+  background: colors.$hover-background;
+}

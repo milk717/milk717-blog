@@ -9,9 +9,18 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import './sidebar.scss';
 import {graphql, Link, useStaticQuery} from 'gatsby';
+
 import {GithubMarkIcon} from '../../icons/GithubMarkIcon';
 import {LinkedInIcon} from '../../icons/LinkedInIcon';
 import {GmailDarkIcon} from '../../icons/GmailIcon';
+import {useLocation} from '@reach/router';
+
+const menuItems = [
+    {path: '/', label: 'Home', icon: faHome},
+    {path: '/category/', label: 'Categories', icon: faFolder},
+    {path: '/tag/', label: 'Tags', icon: faTags},
+    {path: '/info/', label: 'Info', icon: faCircleInfo},
+];
 
 export default function SideBar() {
     const data = useStaticQuery(graphql`
@@ -29,6 +38,7 @@ export default function SideBar() {
         }
     `);
     const metadata = data.site?.siteMetadata;
+    const location = useLocation();
 
     return (
         <div className="sidebar">
@@ -37,7 +47,7 @@ export default function SideBar() {
                     src="https://avatars.githubusercontent.com/u/57657868?v=4"
                     alt="프로필 이미지"
                 />
-                <i className="nickname">{metadata.username}</i>
+                <p className="nickname">{metadata.username}</p>
                 <div className="profile-link">
                     <a href={metadata?.githubUrl}>
                         <GithubMarkIcon />
@@ -52,25 +62,21 @@ export default function SideBar() {
             </div>
             <nav className="sidebar-nav">
                 <div className="search">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} size="1x" />
                     <input type="text" placeholder="Search..." />
                 </div>
-                <Link className="item home" to="/">
-                    <FontAwesomeIcon icon={faHome} />
-                    <p>Home</p>
-                </Link>
-                <Link className="item categories" to="/category">
-                    <FontAwesomeIcon icon={faFolder} />
-                    <p>Categories</p>
-                </Link>
-                <Link className="item tags" to="/tag">
-                    <FontAwesomeIcon icon={faTags} />
-                    <p>Tags</p>
-                </Link>
-                <Link className="item info" to="/info">
-                    <FontAwesomeIcon icon={faCircleInfo} />
-                    <p>Info</p>
-                </Link>
+
+                {menuItems.map(item => (
+                    <Link
+                        key={item.path}
+                        className={`item ${
+                            location.pathname === item.path ? 'selected' : ''
+                        }`}
+                        to={item.path}>
+                        <FontAwesomeIcon icon={item.icon} size="1x" />
+                        <p>{item.label}</p>
+                    </Link>
+                ))}
             </nav>
         </div>
     );

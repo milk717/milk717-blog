@@ -1,2 +1,1 @@
-import './src/stylesheets/styles.scss';
-import './src/stylesheets/_theme.scss';
+import './src/stylesheets/_global.scss';

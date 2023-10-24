@@ -6,7 +6,9 @@ import {Children} from '../../types/common';
 const Layout: FC<Children> = ({children}) => {
     return (
         <div className="layout">
-            <SideBar />
+            <div className="sidebar-area">
+                <SideBar />
+            </div>
             <main className="content-area">{children}</main>
         </div>
     );

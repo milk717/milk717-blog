@@ -12,16 +12,19 @@ $table-head-background: #d5d5d5;
 $table-body-background: #f3f3f3;
 
 // Text Colors
-$sub-text: #888888;
+$sub-text: #787878;
 $plain-text: #181919;
 $selected-text: #FFFFFF;
 
 // Background Colors
 $background-default: #F1F3F9;
+$background-point: rgb(212, 223, 255);
 $callout-warning-background: #FBF2EB;
 $callout-error-background: #FBEDEF;
 $callout-tip-background: #EFF8F8;
 $callout-info-background: #ECF1FA;
+$surface-default-background: rgba(255, 255, 255, 0.1);
+$surface-default-shadow: rgba(31, 38, 135, 0.25);
 
 // Typography Colors
 $color-h1: #1A3B70;
@@ -40,5 +43,5 @@ $callout-error-text: $color-h5;
 
 // Gradient Colors
 $item-background: linear-gradient(90deg, rgba(43, 88, 118, 0.90) 11.46%, rgba(78, 67, 118, 0.90) 75.52%);
-$hover-background: linear-gradient(90deg, rgba(69, 104, 220, 0.75) 0%, rgba(176, 106, 179, 0.75) 100%);
-$background: linear-gradient(113deg, $background-default 0%, rgba(212, 223, 255, 0.81) 53.41%, $background-default 100%);
+$hover-background: linear-gradient(90deg, rgba(69, 104, 220, 0.6) 0%, rgba(176, 106, 179, 0.6) 100%);
+$background:  linear-gradient(113deg, $background-default 0%, #D4DFFF 53.41%, $background-default 100%)
