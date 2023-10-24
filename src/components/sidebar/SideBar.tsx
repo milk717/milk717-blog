@@ -73,7 +73,15 @@ export default function SideBar() {
                             location.pathname === item.path ? 'selected' : ''
                         }`}
                         to={item.path}>
-                        <FontAwesomeIcon icon={item.icon} size="1x" />
+                        <FontAwesomeIcon
+                            icon={item.icon}
+                            size="1x"
+                            color={
+                                location.pathname === item.path
+                                    ? '#fff'
+                                    : '#181919'
+                            }
+                        />
                         <p>{item.label}</p>
                     </Link>
                 ))}

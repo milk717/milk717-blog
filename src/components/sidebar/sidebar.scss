@@ -37,6 +37,9 @@
 
     .selected{
       @include theme.hovered-item;
+      p{
+        @include theme.selected-text;
+      }
     }
 
     .search {
@@ -58,8 +61,8 @@
 
     img {
       border-radius: 50%;
-      width: theme.pxToRem(150px);
-      height: theme.pxToRem(150px);
+      width: 150px;
+      height: 150px;
     }
 
     .nickname {
@@ -73,7 +76,7 @@
     }
   }
 
-  @media (max-width: 1180px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 }

@@ -1,5 +1,6 @@
 @use "../../stylesheets/theme" as theme;
 
+$sidebar-width: 300px;
 $area-gap: 1.75rem;
 
 .cover{
@@ -17,14 +18,19 @@ $area-gap: 1.75rem;
   top: 0;
   left: 0;
   height: calc(100% - calc($area-gap * 4));
-  width: 350px;
+  width: $sidebar-width;
   padding-top: $area-gap;
   padding-left: $area-gap;
 }
 
 .content-area {
   display: flex;
-  max-width: 900px;
+  max-width: 768px;
   margin-top: theme.pxToRem(32px);
-  margin-left: calc(calc($area-gap * 2) + 350px);
+  margin-bottom: theme.pxToRem(32px);
+  margin-left: calc(calc($area-gap * 2) + $sidebar-width);
+
+  @media (max-width: 1100px) {
+    margin-left:$area-gap;
+  }
 }

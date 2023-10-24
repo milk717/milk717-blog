@@ -38,3 +38,8 @@ h6 {
 p {
   @include typography(16px, 400, colors.$color-p);
 }
+
+@mixin selected-text {
+  color: colors.$selected-text;
+  font-weight: 600;
+}
