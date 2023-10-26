@@ -1,10 +1,14 @@
+import '../stylesheets/pages/info.scss';
 import React from 'react';
 import Layout from '../components/layout/Layout';
+import {Hammer} from '../components/common/Hammer/Hammer';
 
 const InfoPage = () => {
     return (
         <Layout>
-            <h1>info</h1>
+            <div className="info-page">
+                <Hammer />
+            </div>
         </Layout>
     );
 };

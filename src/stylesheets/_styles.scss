@@ -11,3 +11,8 @@
   box-shadow: 0 8px 32px 0 colors.$shadow-default;
   background: colors.$background-primary-point;
 }
+
+@mixin tag-background-default {
+  background: colors.$background-secondary-default;
+  border-radius: 16px;
+}
