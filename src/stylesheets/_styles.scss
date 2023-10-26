@@ -1,14 +1,13 @@
 @use "colors";
 
-
-
-@mixin surface{
-  box-shadow: 0 8px 32px 0 colors.$surface-default-shadow;
+@mixin surface-background-default {
+  box-shadow: 0 8px 32px 0 colors.$shadow-default;
   background: colors.$surface-default-background;
+  backdrop-filter: blur(16px);
   border-radius: 16px;
 }
 
-@mixin hovered-item{
-  box-shadow: 0 8px 32px 0 colors.$surface-default-shadow;
-  background: colors.$hover-background;
+@mixin surface-selected-default{
+  box-shadow: 0 8px 32px 0 colors.$shadow-default;
+  background: colors.$background-point-default;
 }

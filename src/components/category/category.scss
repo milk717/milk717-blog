@@ -1,0 +1,84 @@
+@use "../../stylesheets/theme";
+
+.category-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  width: 100%;
+}
+
+.category-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+
+  &:hover{
+   @include theme.surface-background-default;
+  }
+
+  .category-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 8px;
+
+    .title-left{
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+
+      .title{
+        @include theme.menu-text;
+      }
+      .post-count{
+        strong{
+          font-weight: 500;
+        }
+        @include theme.caption-text;
+      }
+    }
+
+    .title-right{
+      border-radius: 4px;
+      padding: 2.5px 5px;
+      &:hover{
+        background: #181919;
+      }
+    }
+  }
+
+  .selected{
+    background: theme.$card-title;
+    .title-left{
+      .title{
+        @include theme.selected-text;
+      }
+
+      .post-count{
+        strong{
+          font-weight: 500;
+        }
+        @include theme.caption-text-selected;
+      }
+    }
+
+  }
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 16px;
+    li{
+      list-style: none;
+      @include theme.p;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+}

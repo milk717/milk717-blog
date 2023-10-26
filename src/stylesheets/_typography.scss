@@ -7,39 +7,46 @@
   color: $color;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  overflow-wrap: break-word
+@mixin h1 {
+  @include typography(2rem, 700, colors.$color-h1);
 }
 
-h1 {
-  @include typography(40px, 700, colors.$color-h1);
+@mixin h2 {
+  @include typography(1.8rem, 700, colors.$color-h2);
 }
 
-h2 {
-  @include typography(32px, 700, colors.$color-h2);
+@mixin h3 {
+  @include typography(1.6rem, 600, colors.$color-h3);
 }
 
-h3 {
-  @include typography(28px, 600, colors.$color-h3);
+@mixin h4 {
+  @include typography(1.4rem, 600, colors.$color-h4);
 }
 
-h4 {
-  @include typography(24px, 600, colors.$color-h4);
+@mixin h5 {
+  @include typography(1.2rem, 600, colors.$color-h5);
 }
 
-h5 {
-  @include typography(20px, 600, colors.$color-h5);
+@mixin h6 {
+  @include typography(1rem, 600, colors.$color-h6);
 }
 
-h6 {
-  @include typography(16px, 600, colors.$color-h6);
+@mixin p {
+  @include typography(1rem, 400, colors.$color-p);
 }
 
-p {
-  @include typography(16px, 400, colors.$color-p);
+@mixin menu-text{
+  @include typography(18px, 400, colors.$color-p);
 }
 
 @mixin selected-text {
-  color: colors.$selected-text;
-  font-weight: 600;
+  @include typography(18px, 600, colors.$selected-text)
+}
+
+@mixin caption-text {
+  @include typography(12px, 300, colors.$color-p)
+}
+
+@mixin caption-text-selected {
+  @include typography(12px, 300, colors.$selected-text)
 }

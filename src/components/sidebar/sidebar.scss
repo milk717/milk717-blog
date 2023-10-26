@@ -6,7 +6,7 @@
   justify-content: space-evenly;
   padding: 24px;
   height:100%;
-  @include theme.surface;
+  @include theme.surface-background-default;
 
   .sidebar-nav {
     display: flex;
@@ -36,7 +36,7 @@
     }
 
     .selected{
-      @include theme.hovered-item;
+      @include theme.surface-selected-default;
       p{
         @include theme.selected-text;
       }

@@ -14,7 +14,7 @@ $table-body-background: #f3f3f3;
 // Text Colors
 $sub-text: #787878;
 $plain-text: #181919;
-$selected-text: #FFFFFF;
+$selected-text: #F1F3F9;
 
 // Background Colors
 $background-default: #F1F3F9;
@@ -24,7 +24,7 @@ $callout-error-background: #FBEDEF;
 $callout-tip-background: #EFF8F8;
 $callout-info-background: #ECF1FA;
 $surface-default-background: rgba(255, 255, 255, 0.1);
-$surface-default-shadow: rgba(31, 38, 135, 0.25);
+$shadow-default: rgba(31, 38, 135, 0.25);
 
 // Typography Colors
 $color-h1: #1A3B70;
@@ -42,6 +42,6 @@ $callout-warning-text: #DD7B2E;
 $callout-error-text: $color-h5;
 
 // Gradient Colors
-$item-background: linear-gradient(90deg, rgba(43, 88, 118, 0.90) 11.46%, rgba(78, 67, 118, 0.90) 75.52%);
-$hover-background: linear-gradient(90deg, rgba(69, 104, 220, 0.6) 0%, rgba(176, 106, 179, 0.6) 100%);
-$background:  linear-gradient(113deg, $background-default 0%, #D4DFFF 53.41%, $background-default 100%)
+$background-default:  linear-gradient(113deg, $background-default 0%, #D4DFFF 53.41%, $background-default 100%);
+$background-point-default: linear-gradient(90deg, rgba(69, 104, 220, 0.6) 0%, rgba(176, 106, 179, 0.6) 100%);
+$card-title: linear-gradient(to left, rgba(102, 126, 234, 0.62) 0%, rgba(118, 75, 162, 0.84) 100%);
