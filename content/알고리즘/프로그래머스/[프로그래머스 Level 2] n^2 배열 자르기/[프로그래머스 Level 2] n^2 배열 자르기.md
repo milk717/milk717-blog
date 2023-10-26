@@ -2,7 +2,7 @@
 slug: "/algorithm-js-n2-array"
 date: "2023-06-20"
 title: "[프로그래머스 Level 2] n^2 배열 자르기"
-category: "Algorithms"
+category: "Algorithm"
 tags:
 - "Algorithm"
 - "Programmers"

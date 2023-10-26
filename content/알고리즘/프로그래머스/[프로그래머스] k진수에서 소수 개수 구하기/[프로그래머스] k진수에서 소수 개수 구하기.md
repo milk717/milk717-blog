@@ -2,7 +2,7 @@
 slug: "/algorithm-js-cnt-k"
 date: "2023-06-14"
 title:  "[프로그래머스 Level 2] k진수에서 소수 개수 구하기"
-category: "Algorithms"
+category: "Algorithm"
 tags:
 - "Algorithm"
 - "Programmers"
