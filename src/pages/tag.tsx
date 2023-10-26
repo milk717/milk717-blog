@@ -1,12 +1,28 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
+import {graphql, PageProps} from 'gatsby';
+import {TagList} from '../components/tag/TagList';
 
-const TagPage = () => {
+const TagPage = ({
+    data: {
+        allMarkdownRemark: {group},
+    },
+}: PageProps<Queries.BlogTagsListQuery>) => {
     return (
         <Layout>
-            <h1>tag</h1>
+            <TagList data={group} />
         </Layout>
     );
 };
 
+export const query = graphql`
+    query BlogTagsList {
+        allMarkdownRemark {
+            group(field: {frontmatter: {tags: SELECT}}) {
+                fieldValue
+                totalCount
+            }
+        }
+    }
+`;
 export default TagPage;
