@@ -13,24 +13,37 @@ $area-gap: 1.75rem;
   z-index: -1;
 }
 
+.layout {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: calc($sidebar-width + $area-gap) 1fr;
+  grid-template-areas: "sidebar content";
+  gap: $area-gap;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content";
+  }
+}
+
 .sidebar-area {
+  grid-area: sidebar;
   position: fixed;
-  top: 0;
-  left: 0;
-  height: calc(100% - calc($area-gap * 4));
-  width: $sidebar-width;
-  padding-top: $area-gap;
-  padding-left: $area-gap;
+  top: $area-gap;
+  left: $area-gap;
+  height: calc(100% - calc($area-gap * 2));
+  @media (max-width: 1100px) {
+    display: none;
+  }
 }
 
 .content-area {
-  display: flex;
+  grid-area: content;
+  align-self: stretch;
+  margin: 2rem 0 0;
   max-width: 768px;
-  margin-top: theme.pxToRem(32px);
-  margin-bottom: theme.pxToRem(32px);
-  margin-left: calc(calc($area-gap * 2) + $sidebar-width);
-
+  height: calc(100% - calc($area-gap * 2));
   @media (max-width: 1100px) {
-    margin-left:$area-gap;
+    padding: 0 $area-gap;
   }
 }

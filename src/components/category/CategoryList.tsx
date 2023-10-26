@@ -10,8 +10,9 @@ export const CategoryList = ({
     const [selectedItemKey, setSelectedItemKey] = useState<number | null>(null);
 
     const handleCategoryItemClick = (categoryItemKey: number) => {
-        console.log(categoryItemKey);
-        setSelectedItemKey(categoryItemKey);
+        setSelectedItemKey(
+            selectedItemKey === categoryItemKey ? null : categoryItemKey,
+        );
     };
 
     return (
