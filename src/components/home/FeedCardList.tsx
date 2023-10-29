@@ -29,7 +29,7 @@ const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
                     <div className="text-area">
                         <div className="text-area-top">
                             <div className="category">
-                                <FontAwesomeIcon icon={faFolder} />
+                                <FontAwesomeIcon icon={faFolder} size="1x" />
                                 <p>{node.frontmatter?.category}</p>
                             </div>
                             <p className="post-title">

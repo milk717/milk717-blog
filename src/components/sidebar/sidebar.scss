@@ -6,24 +6,28 @@
   justify-content: space-evenly;
   padding: 0 24px;
   height:100%;
-  @include theme.surface-background-default;
+  @include theme.inset-area-surface;
 
   .sidebar-nav {
     display: flex;
     flex-direction: column;
-    row-gap: 8px;
+    row-gap: 16px;
 
-    .item, .search, {
+    .item, .search{
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      border-radius: 16px;
       padding: 16px;
       column-gap: 16px;
-      color: theme.$plain-text;
+      @include theme.p;
+      border-radius: 40px;
       p {
         font-size: 18px;
       }
+    }
+
+    .search{
+      @include theme.inset-surface;
     }
 
     .item {

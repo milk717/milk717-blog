@@ -6,7 +6,7 @@
   row-gap: 16px;
   padding: 0 16px;
   height: 100%;
-  @include theme.surface-background-default;
+  @include theme.inset-area-surface;
 }
 
 .category-item{
@@ -28,7 +28,6 @@
     border-radius: 16px;
 
     &:hover{
-      @include theme.surface-background-default;
     }
 
     .title-left{

@@ -17,7 +17,7 @@
   row-gap: 1rem;
   width: 100%;
   height: 100%;
-  @include theme.surface-background-default;
+  @include theme.inset-area-surface;
 
   .hammer {
     animation: hammerAnimation 0.5s infinite;

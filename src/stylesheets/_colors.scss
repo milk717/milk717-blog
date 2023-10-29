@@ -14,16 +14,16 @@ $table-body-background: #f3f3f3;
 // Text Colors
 $sub-text: #787878;
 $plain-text: #181919;
-$selected-text: #F1F3F9;
+$selected-text: #FFFFFF;
 
 // Background Colors
-$background-default: #F1F3F9;
+$background-default: #EFF1F7;
 $background-point: rgb(212, 223, 255);
 $callout-warning-background: #FBF2EB;
 $callout-error-background: #FBEDEF;
 $callout-tip-background: #EFF8F8;
 $callout-info-background: #ECF1FA;
-$surface-default-background: rgba(255, 255, 255, 0.1);
+$surface-default-background: #EFF1F7;
 $shadow-default: rgba(31, 38, 135, 0.25);
 
 // Typography Colors
@@ -42,7 +42,7 @@ $callout-warning-text: #DD7B2E;
 $callout-error-text: $color-h5;
 
 // Gradient Colors
-$background-primary-default:  linear-gradient(113deg, $background-default 0%, #D4DFFF 53.41%, $background-default 100%);
+$background-primary-default:  #F8F8FA;
 $background-primary-point: linear-gradient(90deg, rgba(69, 104, 220, 0.6) 0%, rgba(176, 106, 179, 0.6) 100%);
 $background-secondary-default: linear-gradient(0deg, #BDC2E8 0%, #BDC2E8 1%, #E6DEE9 100%);
 $card-title: linear-gradient(to left, rgba(102, 126, 234, 0.62) 0%, rgba(118, 75, 162, 0.84) 100%);
