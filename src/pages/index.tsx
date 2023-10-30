@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
-import FeedCardList from '../components/home/FeedCardList';
+import FeedCardList from '../components/common/FeedCardList';
 import Layout from '../components/layout/Layout';
 import {Nav} from '../components/common/Nav';
 

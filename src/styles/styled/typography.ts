@@ -60,4 +60,11 @@ const Medium = styled.p<{status: boolean}>`
     font-family: 'Pretendard', serif;
 `;
 
-export default {H1, H2, H3, H4, H5, H6, P, Medium};
+const Weak = styled.p`
+    color: ${({theme}) => theme.colors.grayscale02};
+    font-family: 'Pretendard', serif;
+    font-size: ${({theme}) => theme.fontSizes.sm};
+    font-weight: 400;
+`;
+
+export default {H1, H2, H3, H4, H5, H6, P, Medium, Weak};
