@@ -26,6 +26,7 @@ const config: GatsbyConfig = {
                 head: true,
             },
         },
+        'gatsby-plugin-emotion',
         'gatsby-plugin-sass',
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',

@@ -1,4 +1,4 @@
-import '../stylesheets/pages/info.scss';
+import '../styles/pages/info.scss';
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import {Hammer} from '../components/common/Hammer/Hammer';
