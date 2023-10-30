@@ -7,7 +7,7 @@ import {
     faMagnifyingGlass,
 } from '@fortawesome/free-solid-svg-icons';
 import './sidebar.scss';
-import {graphql, Link, useStaticQuery} from 'gatsby';
+import {Link} from 'gatsby';
 import {useLocation} from '@reach/router';
 
 const menuItems = [
@@ -17,21 +17,6 @@ const menuItems = [
 ];
 
 export default function SideBar() {
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    title
-                    siteUrl
-                    username
-                    githubUrl
-                    email
-                    linkedIn
-                }
-            }
-        }
-    `);
-    const metadata = data.site?.siteMetadata;
     const location = useLocation();
 
     return (

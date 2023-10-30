@@ -5,8 +5,6 @@ import {Interpolation} from '@emotion/serialize';
 
 type Props = {
     children: ReactNode;
-    padding: number;
-    borderRadius: number;
     style?: Interpolation<Theme>;
 };
 

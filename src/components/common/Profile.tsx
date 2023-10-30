@@ -25,8 +25,6 @@ export const Profile: React.FC<Props> = () => {
     const metadata = data.site?.siteMetadata;
     return (
         <Box
-            padding={24}
-            borderRadius={40}
             style={css`
                 display: flex;
                 flex-direction: column;
