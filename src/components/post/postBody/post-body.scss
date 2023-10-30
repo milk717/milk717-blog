@@ -1,22 +1,36 @@
-@use '../../../stylesheets/colors';
+@use '../../../stylesheets/theme';
 
 .post-body {
   hr {
-    border: 1px solid colors.$text-highLight;
     border-radius: 4px;
   }
-  h1, h2 {
-    margin: 1rem 0;
+
+  h1{
+    @include theme.h1;
   }
 
-  h3, h4, h5, h6 {
-    margin: 0.5rem 0;
-    color: colors.$text-highLight
+  h2{
+    @include theme.h2;
+  }
+
+  h3{
+    @include theme.h3;
+  }
+
+  h4{
+    @include theme.h4;
+  }
+
+  h5{
+    @include theme.h5;
+  }
+
+  h6{
+    @include theme.h6;
   }
 
   p {
-    line-height: 1.75;
-    color: colors.$text-default;
+    @include theme.p;
     overflow-wrap: break-word;
   }
 
@@ -25,7 +39,6 @@
   }
 
   code{
-    background-color: colors.$text-code-background;
     padding: 2px 4px;
     border-radius: 4px;
   }
@@ -50,14 +63,12 @@ table {
     padding: 8px;
   }
   thead {
-    background-color: colors.$table-head-background;
   }
   tbody {
     tr {
       border-bottom: 1px solid var(--tb-border-color);
 
       &:nth-child(2n) {
-        background-color: colors.$table-body-background;
       }
     }
   }

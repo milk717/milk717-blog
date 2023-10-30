@@ -1,4 +1,4 @@
-@use '../../../stylesheets/colors';
+@use '../../../stylesheets/theme';
 
 .post-title {
   display: flex;
@@ -27,8 +27,7 @@
       align-items: center;
       column-gap: 0.5rem;
       p {
-        background-color: colors.$color-chip;
-        color: colors.$color-chip-text;
+        @include theme.p;
         border-radius: 1rem;
         padding: 4px 12px;
       }

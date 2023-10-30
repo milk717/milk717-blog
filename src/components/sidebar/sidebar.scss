@@ -28,6 +28,7 @@
 
     .search{
       @include theme.inset-surface;
+      border: none;
     }
 
     .item {

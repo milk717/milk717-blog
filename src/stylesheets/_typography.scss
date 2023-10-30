@@ -9,30 +9,39 @@
 
 @mixin h1 {
   @include typography(2rem, 700, colors.$color-h1);
+  margin: 1rem 0;
 }
 
 @mixin h2 {
-  @include typography(1.8rem, 700, colors.$color-h2);
+  @include typography(1.5rem, 700, colors.$color-h2);
+  margin: 0.6rem 0;
 }
 
 @mixin h3 {
-  @include typography(1.6rem, 600, colors.$color-h3);
+  @include typography(1.2rem, 600, colors.$color-h3);
+  margin: 0.6rem 0;
 }
 
 @mixin h4 {
-  @include typography(1.4rem, 600, colors.$color-h4);
+  @include typography(1.1rem, 600, colors.$color-h4);
+  margin: 0.4rem 0;
 }
 
 @mixin h5 {
-  @include typography(1.2rem, 600, colors.$color-h5);
+  @include typography(1rem, 600, colors.$color-h5);
+  margin: 0.2rem 0;
 }
 
 @mixin h6 {
-  @include typography(1rem, 600, colors.$color-h6);
+  @include typography(0.9rem, 600, colors.$color-h6);
+  margin: 0.1rem 0;
 }
 
 @mixin p {
   @include typography(1rem, 400, colors.$color-p);
+  letter-spacing: -.004em;
+  line-height: 1.7;
+  word-break: keep-all;
 }
 
 @mixin menu-text{

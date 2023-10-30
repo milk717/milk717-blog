@@ -12,6 +12,7 @@ const BlogPostTemplate = ({
 }: PageProps<Queries.BlogPostQuery>) => {
     const html = markdownRemark?.html;
     const {title, category, tags} = markdownRemark?.frontmatter!;
+    console.log(markdownRemark);
     return (
         <Layout>
             <PostContent>
@@ -32,6 +33,7 @@ export const pageQuery = graphql`
                 title
                 category
                 tags
+                date
             }
         }
     }
