@@ -23,7 +23,7 @@ const Layout: FC<Children> = ({children}) => {
                 css={css`
                     display: grid;
                     height: 100vh;
-                    grid-template-columns: repeat(1fr, 2);
+                    grid-template-columns: 1fr 3fr;
                     grid-template-areas: 'sidebar content';
                     gap: ${theme.size.areaGap};
 

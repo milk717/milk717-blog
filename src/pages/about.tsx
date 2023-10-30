@@ -1,7 +1,7 @@
 import '../styles/pages/info.scss';
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import {Hammer} from '../components/common/Hammer/Hammer';
+import {Hammer} from '../components/common/Hammer';
 
 const InfoPage = () => {
     return (
