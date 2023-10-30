@@ -1,9 +1,9 @@
 import './layout.scss';
 import React, {FC} from 'react';
-import SideBar from '@components/sidebar/SideBar';
-import {Children} from '@/types/common';
 import {ThemeProvider} from '@emotion/react';
-import {theme} from '@styles/theme';
+import {Children} from '../../types/common';
+import {theme} from '../../styles/theme';
+import {Profile} from '../common/Profile';
 
 const Layout: FC<Children> = ({children}) => {
     return (
@@ -11,7 +11,8 @@ const Layout: FC<Children> = ({children}) => {
             <div className="cover"></div>
             <div className="layout">
                 <div className="sidebar-area">
-                    <SideBar />
+                    {/*<SideBar />*/}
+                    <Profile />
                 </div>
                 <main className="content-area">{children}</main>
             </div>

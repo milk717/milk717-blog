@@ -3,3 +3,5 @@ import {gradients} from './_gradients';
 import {shadows} from './_shadows';
 
 export const theme = {colors, gradients, shadows};
+
+export type ThemeType = typeof theme;
