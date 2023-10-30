@@ -1,6 +1,6 @@
 import './layout.scss';
 import React, {FC} from 'react';
-import {ThemeProvider} from '@emotion/react';
+import {css, ThemeProvider} from '@emotion/react';
 import {Children} from '../../types/common';
 import {theme} from '../../styles/theme';
 import {Profile} from '../common/Profile';
@@ -17,7 +17,15 @@ const Layout: FC<Children> = ({children}) => {
                     <Search />
                     <Tags />
                 </div>
-                <main className="content-area">{children}</main>
+                <main
+                    className="content-area"
+                    css={css`
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 1.5rem;
+                    `}>
+                    {children}
+                </main>
             </div>
         </ThemeProvider>
     );

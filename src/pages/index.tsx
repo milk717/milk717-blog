@@ -3,10 +3,12 @@ import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
 import FeedCardList from '../components/home/FeedCardList';
 import Layout from '../components/layout/Layout';
+import {Nav} from '../components/common/Nav';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
     return (
         <Layout>
+            <Nav />
             <FeedCardList data={data} />
         </Layout>
     );
