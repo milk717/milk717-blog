@@ -2,8 +2,9 @@ import {css} from '@emotion/react';
 import {theme} from '../../styles/theme';
 import {Profile} from './Profile';
 import {Search} from './Search';
-import {Tags} from './Tags';
 import React from 'react';
+import {ListBox} from './ListBox';
+import {graphql, useStaticQuery} from 'gatsby';
 
 export const Sidebar = () => {
     return (
@@ -21,7 +22,21 @@ export const Sidebar = () => {
             `}>
             <Profile />
             <Search />
-            <Tags />
+            <ListBox
+                title={'Tags'}
+                list={
+                    useStaticQuery(graphql`
+                        query BlogTagsList {
+                            allMarkdownRemark {
+                                group(field: {frontmatter: {tags: SELECT}}) {
+                                    text: fieldValue
+                                    subText: totalCount
+                                }
+                            }
+                        }
+                    `).allMarkdownRemark.group
+                }
+            />
         </div>
     );
 };
