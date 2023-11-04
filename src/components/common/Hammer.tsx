@@ -3,24 +3,23 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHammer} from '@fortawesome/free-solid-svg-icons';
 import {css, useTheme} from '@emotion/react';
 import Typography from '../../styles/styled/typography';
-import {Box} from './Box';
 
 export const Hammer = () => {
     const theme = useTheme();
     return (
-        <Box
-            style={css`
+        <div
+            css={css`
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 border-radius: 40px;
-                width: 100%;
-                height: 100%;
+                row-gap: 1rem;
+                padding: 1rem;
             `}>
             <FontAwesomeIcon
                 icon={faHammer}
-                size="10x"
+                size="6x"
                 color={theme.colors.colorPoint03}
                 css={css`
                     @keyframes hammerAnimation {
@@ -35,7 +34,7 @@ export const Hammer = () => {
                     animation: hammerAnimation 0.5s infinite;
                 `}
             />
-            <Typography.H2>Coming Soon</Typography.H2>
-        </Box>
+            <Typography.H2>준비중</Typography.H2>
+        </div>
     );
 };

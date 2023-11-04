@@ -1,14 +1,5 @@
 @use "../../styles/theme";
 
-.category-list{
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
-  padding: 0 16px;
-  height: 100%;
-  @include theme.inset-area-surface;
-}
-
 .category-item{
   display: flex;
   flex-direction: column;
@@ -36,7 +27,7 @@
       column-gap: 16px;
 
       .title{
-        @include theme.menu-text;
+        color: #171717;
       }
       .post-count{
         strong{

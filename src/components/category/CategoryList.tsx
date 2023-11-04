@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {CategoryItem} from './CategoryItem';
 import './category.scss';
+import {Box} from '../common/Box';
+import {css} from '@emotion/react';
 
 export const CategoryList = ({
     data,
@@ -16,7 +18,15 @@ export const CategoryList = ({
     };
 
     return (
-        <div className="category-list">
+        <Box
+            style={css`
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+                padding: 0 16px;
+                height: 100%;
+                border-radius: 40px;
+            `}>
             {data.map(({fieldValue, totalCount, edges}, key) => {
                 return (
                     <CategoryItem
@@ -30,6 +40,6 @@ export const CategoryList = ({
                     />
                 );
             })}
-        </div>
+        </Box>
     );
 };
