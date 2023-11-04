@@ -3,7 +3,7 @@ import {graphql, PageProps} from 'gatsby';
 import Layout from '../components/layout/Layout';
 import PostHead from '../components/post/PostHead/PostHead';
 import {defineCustomElements} from '@deckdeckgo/highlight-code/dist/loader';
-import {PostContent} from '../components/post/postContent/PostContent';
+import {PostContent} from '../components/post/PostContent';
 import {PostBody} from '../components/post/postBody/PostBody';
 
 defineCustomElements();

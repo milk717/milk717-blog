@@ -22,7 +22,7 @@ const Layout: FC<Children> = ({children}) => {
                     display: flex;
                     justify-content: center;
                     gap: ${theme.size.areaGap};
-                    margin: ${theme.size.areaGap};
+                    padding: ${theme.size.areaGap};
                 `}>
                 <Sidebar />
                 <main
