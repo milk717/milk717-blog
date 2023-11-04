@@ -30,6 +30,7 @@ export const HomeContent: FC<Props> = ({data}) => {
                         display: flex;
                         flex-direction: column;
                         row-gap: ${theme.size.areaGap};
+                        flex-grow: 1;
                     `}>
                     <ListBox title={'인기 게시글'} />
                     <ListBox title={'최근 댓글'} />
