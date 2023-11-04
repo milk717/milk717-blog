@@ -1,10 +1,8 @@
 import React, {FC} from 'react';
 import {css, ThemeProvider} from '@emotion/react';
 import {Children} from '../../types/common';
-import {Profile} from '../common/Profile';
-import {Search} from '../common/Search';
-import {Tags} from '../common/Tags';
 import {theme} from '../../styles/theme';
+import {Sidebar} from '../common/Sidebar';
 
 const Layout: FC<Children> = ({children}) => {
     return (
@@ -26,22 +24,7 @@ const Layout: FC<Children> = ({children}) => {
                     gap: ${theme.size.areaGap};
                     margin: ${theme.size.areaGap};
                 `}>
-                <div
-                    css={css`
-                        position: sticky;
-                        top: 0;
-                        display: flex;
-                        flex-direction: column;
-                        row-gap: ${theme.size.areaGap};
-                        width: 262px;
-                        @media (max-width: 1000px) {
-                            display: none;
-                        }
-                    `}>
-                    <Profile />
-                    <Search />
-                    <Tags />
-                </div>
+                <Sidebar />
                 <main
                     css={css`
                         display: flex;
