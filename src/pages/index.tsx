@@ -4,12 +4,27 @@ import {graphql} from 'gatsby';
 import FeedCardList from '../components/common/FeedCardList';
 import Layout from '../components/layout/Layout';
 import {Nav} from '../components/common/Nav';
+import {css} from '@emotion/react';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
     return (
         <Layout>
-            <Nav />
-            <FeedCardList data={data} />
+            <div
+                css={css`
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1.5rem;
+                `}>
+                <Nav />
+                <div
+                    css={css`
+                        display: flex;
+                        column-gap: 1.5rem;
+                    `}>
+                    <FeedCardList data={data} />
+                    <Nav />
+                </div>
+            </div>
         </Layout>
     );
 };

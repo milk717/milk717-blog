@@ -16,7 +16,6 @@ const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
                 display: flex;
                 flex-direction: column;
                 row-gap: ${theme.size.areaGap};
-                width: 600px;
             `}>
             {posts?.map(({node}) => (
                 <Link

@@ -21,26 +21,20 @@ const Layout: FC<Children> = ({children}) => {
                 `}></div>
             <div
                 css={css`
-                    display: grid;
-                    height: 100vh;
-                    grid-template-columns: 1fr 3fr;
-                    grid-template-areas: 'sidebar content';
+                    display: flex;
+                    justify-content: center;
                     gap: ${theme.size.areaGap};
-
-                    @media (max-width: 1100px) {
-                        grid-template-columns: 1fr;
-                        grid-template-areas: 'content';
-                    }
+                    margin: ${theme.size.areaGap};
                 `}>
                 <div
                     css={css`
-                        grid-area: sidebar;
-                        position: fixed;
+                        position: sticky;
+                        top: 0;
                         display: flex;
                         flex-direction: column;
                         row-gap: ${theme.size.areaGap};
-                        padding: ${theme.size.areaGap};
-                        @media (max-width: 900px) {
+                        width: 262px;
+                        @media (max-width: 1000px) {
                             display: none;
                         }
                     `}>
@@ -50,13 +44,10 @@ const Layout: FC<Children> = ({children}) => {
                 </div>
                 <main
                     css={css`
-                        grid-area: content;
                         display: flex;
                         flex-direction: column;
                         row-gap: 1.5rem;
-                        align-self: stretch;
-                        max-width: 768px;
-                        padding: ${theme.size.areaGap} 0;
+                        flex: 0 1 834px;
                         @media (max-width: 1100px) {
                             padding: ${theme.size.areaGap};
                         }
