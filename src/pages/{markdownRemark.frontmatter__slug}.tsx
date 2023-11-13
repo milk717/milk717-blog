@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {graphql, PageProps} from 'gatsby';
-import Layout from '../components/layout/Layout';
 import PostHead from '../components/post/PostHead/PostHead';
 import {defineCustomElements} from '@deckdeckgo/highlight-code/dist/loader';
 import {PostContent} from '../components/post/PostContent';
 import {PostBody} from '../components/post/postBody/PostBody';
+import PostLayout from '../components/layout/PostLayout';
 
 defineCustomElements();
 const BlogPostTemplate = ({
@@ -14,13 +14,13 @@ const BlogPostTemplate = ({
   const {title, category, tags} = markdownRemark?.frontmatter!;
   console.log(markdownRemark);
   return (
-    <Layout>
+    <PostLayout>
       <PostContent>
         <PostHead title={title} category={category} tags={tags} />
         <hr />
         <PostBody html={html ?? ''} />
       </PostContent>
-    </Layout>
+    </PostLayout>
   );
 };
 export default BlogPostTemplate;

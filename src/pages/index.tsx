@@ -1,14 +1,14 @@
 import * as React from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
-import Layout from '../components/layout/Layout';
 import {HomeContent} from '../components/home/HomeContent';
+import HomeLayout from '../components/layout/HomeLayout';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
   return (
-    <Layout>
+    <HomeLayout>
       <HomeContent data={data} />
-    </Layout>
+    </HomeLayout>
   );
 };
 

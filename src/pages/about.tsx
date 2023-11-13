@@ -1,12 +1,12 @@
 import React from 'react';
-import Layout from '../components/layout/Layout';
 import {Hammer} from '../components/common/Hammer';
 import {Box} from '../components/common/Box';
 import {css} from '@emotion/react';
+import HomeLayout from '../components/layout/HomeLayout';
 
 const InfoPage = () => {
   return (
-    <Layout>
+    <HomeLayout>
       <Box
         style={css`
           display: flex;
@@ -17,7 +17,7 @@ const InfoPage = () => {
         `}>
         <Hammer />
       </Box>
-    </Layout>
+    </HomeLayout>
   );
 };
 
