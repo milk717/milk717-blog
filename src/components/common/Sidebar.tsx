@@ -10,10 +10,13 @@ export const Sidebar = () => {
   return (
     <div
       css={css`
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         row-gap: ${theme.size.areaGap};
         width: 262px;
+        @media (max-width: ${theme.breakpoints.tablet}) {
+          width: 100%;
+        }
       `}>
       <Profile />
       <Search />

@@ -26,6 +26,9 @@ const Layout: FC<Children> = ({children}) => {
           justify-content: center;
           gap: ${theme.size.areaGap};
           padding: ${theme.size.areaGap};
+          @media (max-width: ${theme.breakpoints.tablet}) {
+            flex-direction: column;
+          }
         `}>
         <aside>
           <Sidebar />
@@ -33,16 +36,28 @@ const Layout: FC<Children> = ({children}) => {
         <main
           css={css`
             display: grid;
-            grid-template-columns: 3fr 1fr;
+            grid-template-columns: minmax(auto, 600px) 1fr;
             grid-template-rows: calc(${theme.size.navHeight} * 1) auto;
             gap: ${theme.size.areaGap};
             height: calc(100vh - calc(${theme.size.areaGap} * 2));
+            > *:nth-child(1) {
+              grid-area: 1 / 1 / 2 / 3;
+            }
+            @media (max-width: ${theme.breakpoints.laptop}) {
+              grid-template-columns: 1fr;
+              column-gap: 0;
+              > *:nth-child(1) {
+                grid-area: 1 / 1;
+              }
+              > *:nth-child(3) {
+                display: none;
+              }
+            }
           `}>
           <nav
             css={css`
               grid-area: 1 / 1 / 2 / 3;
               align-self: start;
-
               z-index: 1;
             `}>
             <Nav />
@@ -59,9 +74,6 @@ const Layout: FC<Children> = ({children}) => {
                 display: flex;
                 flex-direction: column;
                 row-gap: ${theme.size.areaGap};
-                @media (max-width: ${theme.breakpoints.mobileL}) {
-                  display: none;
-                }
               `}>
               <ListBox title={'인기 게시글'} />
               <ListBox title={'최근 댓글'} />

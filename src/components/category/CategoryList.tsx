@@ -22,8 +22,8 @@ export const CategoryList = ({
       style={css`
         display: flex;
         flex-direction: column;
-        row-gap: 16px;
-        padding: 0 16px;
+        row-gap: 1rem;
+        padding: 0 1rem;
         height: 100%;
         border-radius: 40px;
       `}>
