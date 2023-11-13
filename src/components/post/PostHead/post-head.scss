@@ -9,23 +9,28 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 0.5rem;
+
     .item {
       display: grid;
       grid-template-columns: 120px 0.7fr;
       column-gap: 4px;
-      .category{
+
+      .category {
         padding: 4px 12px;
       }
     }
+
     .left {
       display: flex;
       align-items: center;
       column-gap: 4px;
     }
+
     .tags-item {
       display: flex;
       align-items: center;
       column-gap: 0.5rem;
+
       p {
         @include theme.p;
         border-radius: 1rem;

@@ -9,5 +9,5 @@ export const theme = {colors, gradients, shadows, fontSizes, size, breakpoints};
 export type ThemeType = typeof theme;
 
 declare module '@emotion/react' {
-    export interface Theme extends ThemeType {}
+  export interface Theme extends ThemeType {}
 }

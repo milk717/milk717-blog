@@ -5,27 +5,27 @@
     border-radius: 4px;
   }
 
-  h1{
+  h1 {
     @include theme.h1;
   }
 
-  h2{
+  h2 {
     @include theme.h2;
   }
 
-  h3{
+  h3 {
     @include theme.h3;
   }
 
-  h4{
+  h4 {
     @include theme.h4;
   }
 
-  h5{
+  h5 {
     @include theme.h5;
   }
 
-  h6{
+  h6 {
     @include theme.h6;
   }
 
@@ -34,16 +34,16 @@
     overflow-wrap: break-word;
   }
 
-  li{
+  li {
     margin: 8px 0;
   }
 
-  code{
+  code {
     padding: 2px 4px;
     border-radius: 4px;
   }
 
-  ol, ul{
+  ol, ul {
     padding: 0 1rem;
   }
 
@@ -63,11 +63,14 @@ table {
   min-width: 100%;
   overflow-x: auto;
   border-spacing: 0;
+
   th, td {
     padding: 8px;
   }
+
   thead {
   }
+
   tbody {
     tr {
       border-bottom: 1px solid var(--tb-border-color);

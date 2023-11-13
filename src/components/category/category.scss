@@ -1,73 +1,79 @@
 @use "../../styles/theme";
 
-.category-item{
+.category-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 16px;
   cursor: pointer;
 
-  &:first-child{
+  &:first-child {
     margin-top: 16px;
   }
 
-  .category-title{
+  .category-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px;
     border-radius: 16px;
 
-    &:hover{
+    &:hover {
     }
 
-    .title-left{
+    .title-left {
       display: flex;
       align-items: center;
       column-gap: 16px;
 
-      .title{
+      .title {
         color: #171717;
       }
-      .post-count{
-        strong{
+
+      .post-count {
+        strong {
           font-weight: 500;
         }
+
         @include theme.caption-text;
       }
     }
   }
 
-  .selected{
+  .selected {
     background: theme.$card-title;
-    &:hover{
+
+    &:hover {
       background: theme.$card-title;
     }
-    .title-left{
-      .title{
+
+    .title-left {
+      .title {
         @include theme.selected-text;
       }
 
-      .post-count{
-        strong{
+      .post-count {
+        strong {
           font-weight: 500;
         }
+
         @include theme.caption-text-selected;
       }
     }
 
   }
 
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
     padding: 16px;
-    li{
+
+    li {
       list-style: none;
       @include theme.p;
 
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
