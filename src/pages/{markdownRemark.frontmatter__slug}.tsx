@@ -2,7 +2,6 @@ import * as React from 'react';
 import {graphql, PageProps} from 'gatsby';
 import PostHead from '../components/post/PostHead/PostHead';
 import {defineCustomElements} from '@deckdeckgo/highlight-code/dist/loader';
-import {PostContent} from '../components/post/PostContent';
 import {PostBody} from '../components/post/postBody/PostBody';
 import PostLayout from '../components/layout/PostLayout';
 
@@ -15,11 +14,8 @@ const BlogPostTemplate = ({
   console.log(markdownRemark);
   return (
     <PostLayout>
-      <PostContent>
-        <PostHead title={title} category={category} tags={tags} />
-        <hr />
-        <PostBody html={html ?? ''} />
-      </PostContent>
+      <PostHead title={title} category={category} tags={tags} />
+      <PostBody html={html ?? ''} />
     </PostLayout>
   );
 };

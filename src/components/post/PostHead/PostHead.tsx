@@ -1,7 +1,9 @@
 import React from 'react';
-import {faFolder, faTags} from '@fortawesome/free-solid-svg-icons';
+import Typography from '../../../styles/styled/typography';
+import {css} from '@emotion/react';
+import {theme} from '../../../styles/theme';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import './post-head.scss';
+import {faFolder} from '@fortawesome/free-solid-svg-icons';
 
 type PostHeadParam = {
   title: string | null;
@@ -11,25 +13,42 @@ type PostHeadParam = {
 
 const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
   return (
-    <div className="post-title">
-      <h1>{title}</h1>
-      <div className="properties">
-        <div className="item">
-          <div className="left">
-            <FontAwesomeIcon icon={faFolder} />
-            <p>카테고리</p>
-          </div>
-          <p className="category">{category}</p>
-        </div>
-        <div className="item tags">
-          <div className="left">
-            <FontAwesomeIcon icon={faTags} />
-            <p>태그</p>
-          </div>
-          <div className="tags-item">
-            {tags?.map(tag => <p>{tag}</p>) ?? null}
-          </div>
-        </div>
+    <div
+      css={css`
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1rem;
+      `}>
+      <div
+        css={css`
+          display: flex;
+          align-items: center;
+          column-gap: 0.5rem;
+          padding: 0.5rem 1rem;
+          background: ${theme.colors.colorSurface04};
+          border-radius: 1rem;
+        `}>
+        <FontAwesomeIcon icon={faFolder} color={theme.colors.colorPoint03} />
+        <Typography.P>{category}</Typography.P>
+      </div>
+      <Typography.H1>{title}</Typography.H1>
+      <div
+        css={css`
+          display: flex;
+          column-gap: 0.5rem;
+        `}>
+        {tags?.map(tag => (
+          <Typography.P
+            css={css`
+              font-size: 0.875rem;
+              padding: 0.25rem 0.5rem;
+              background-color: ${theme.colors.colorSurface02};
+              border-radius: 0.5rem;
+            `}>
+            {tag}
+          </Typography.P>
+        )) ?? null}
       </div>
     </div>
   );
