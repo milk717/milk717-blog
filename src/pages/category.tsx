@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import {graphql, PageProps} from 'gatsby';
 import {CategoryList} from '../components/category/CategoryList';
-import {Nav} from '../components/common/Nav';
 
 const CategoryPage = ({
     data: {
@@ -11,7 +10,6 @@ const CategoryPage = ({
 }: PageProps<Queries.BlogCategoryListQuery>) => {
     return (
         <Layout>
-            <Nav />
             <CategoryList data={group} />
         </Layout>
     );

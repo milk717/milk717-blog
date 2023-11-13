@@ -20,7 +20,8 @@ export const Nav = () => {
                 justify-content: space-between;
                 align-items: center;
                 align-self: stretch;
-                padding: 1rem 1.5rem;
+                padding: 0 1.5rem;
+                height: 3.5rem;
                 border-radius: 24px;
             `}>
             <div
@@ -46,7 +47,6 @@ export const Nav = () => {
                     </Link>
                 ))}
             </div>
-            <div></div>
         </Box>
     );
 };

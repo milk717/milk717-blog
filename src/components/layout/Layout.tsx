@@ -3,6 +3,8 @@ import {css, ThemeProvider} from '@emotion/react';
 import {Children} from '../../types/common';
 import {theme} from '../../styles/theme';
 import {Sidebar} from '../common/Sidebar';
+import {Nav} from '../common/Nav';
+import {ListBox} from '../common/ListBox';
 
 const Layout: FC<Children> = ({children}) => {
     return (
@@ -16,7 +18,8 @@ const Layout: FC<Children> = ({children}) => {
                     width: 100vw;
                     background-color: ${theme.colors.colorSurface00};
                     z-index: -1;
-                `}></div>
+                `}
+            />
             <div
                 css={css`
                     display: flex;
@@ -24,18 +27,47 @@ const Layout: FC<Children> = ({children}) => {
                     gap: ${theme.size.areaGap};
                     padding: ${theme.size.areaGap};
                 `}>
-                <Sidebar />
+                <aside>
+                    <Sidebar />
+                </aside>
                 <main
                     css={css`
-                        display: flex;
-                        flex-direction: column;
-                        row-gap: 1.5rem;
-                        flex: 0 1 834px;
-                        @media (max-width: 1100px) {
-                            padding: ${theme.size.areaGap};
-                        }
+                        display: grid;
+                        grid-template-columns: 3fr 1fr;
+                        grid-template-rows: calc(${theme.size.navHeight} * 1) auto;
+                        gap: ${theme.size.areaGap};
+                        height: calc(100vh - calc(${theme.size.areaGap} * 2));
                     `}>
-                    {children}
+                    <nav
+                        css={css`
+                            grid-area: 1 / 1 / 2 / 3;
+                            align-self: start;
+
+                            z-index: 1;
+                        `}>
+                        <Nav />
+                    </nav>
+                    <section
+                        css={css`
+                            overflow-y: scroll;
+                        `}>
+                        {children}
+                    </section>
+                    <section>
+                        <div
+                            css={css`
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: ${theme.size.areaGap};
+                                @media (max-width: ${theme.breakpoints
+                                        .mobileL}) {
+                                    display: none;
+                                }
+                            `}>
+                            <ListBox title={'인기 게시글'} />
+                            <ListBox title={'최근 댓글'} />
+                        </div>
+                    </section>
                 </main>
             </div>
         </ThemeProvider>
