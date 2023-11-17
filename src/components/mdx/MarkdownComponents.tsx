@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {HTMLAttributes, PropsWithChildren} from 'react';
+import Typography from '../../styles/styled/typography';
+import {theme} from '../../styles/theme';
 import {MDXProvider} from '@mdx-js/react';
-import Typography from '../../../styles/styled/typography';
 import {css} from '@emotion/react';
-import {theme} from '../../../styles/theme';
 import 'prismjs/themes/prism-tomorrow.css';
 
 const components = {
@@ -98,6 +98,8 @@ const components = {
   ),
 };
 
-export const PostBody: React.FC<PropsWithChildren> = ({children}) => {
+const MarkdownComponents: React.FC<PropsWithChildren> = ({children}) => {
   return <MDXProvider components={components}>{children}</MDXProvider>;
 };
+
+export default MarkdownComponents;

@@ -1,7 +1,7 @@
 import React from 'react';
-import Typography from '../../../styles/styled/typography';
+import Typography from '../../styles/styled/typography';
 import {css} from '@emotion/react';
-import {theme} from '../../../styles/theme';
+import {theme} from '../../styles/theme';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFolder} from '@fortawesome/free-solid-svg-icons';
 

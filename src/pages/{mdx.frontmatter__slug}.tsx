@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {graphql, PageProps} from 'gatsby';
-import PostHead from '../components/post/PostHead/PostHead';
-import {PostBody} from '../components/post/postBody/PostBody';
+import PostHead from '../components/post/PostHead';
 import PostLayout from '../components/layout/PostLayout';
+import MarkdownComponents from '../components/mdx/MarkdownComponents';
 
 const BlogPostTemplate = ({
   data,
@@ -12,7 +12,7 @@ const BlogPostTemplate = ({
   return (
     <PostLayout>
       <PostHead title={title} category={category} tags={tags} />
-      <PostBody>{children}</PostBody>
+      <MarkdownComponents>{children}</MarkdownComponents>
     </PostLayout>
   );
 };
