@@ -1,5 +1,5 @@
-import type {GatsbyConfig} from 'gatsby';
 import dotenv from 'dotenv';
+import {GatsbyConfig} from 'gatsby';
 
 dotenv.config({
   path: `.env`,
@@ -41,23 +41,42 @@ const config: GatsbyConfig = {
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-code-titles',
-          },
-          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
-              showCaptions: true,
+              wrapperStyle: 'margin: 1.75rem auto;',
             },
           },
-          // {
-          //   resolve: `gatsby-remark-highlight-code`,
-          //   options: {
-          //     terminal: 'carbon',
-          //     theme: 'one-dark',
-          //     lineNumbers: true,
-          //   },
-          // },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: 'superscript',
+                  extend: 'javascript',
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              prompt: {
+                user: 'root',
+                host: 'localhost',
+                global: false,
+              },
+              escapeEntities: {},
+            },
+          },
         ],
       },
     },

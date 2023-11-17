@@ -4,6 +4,7 @@ import {MDXProvider} from '@mdx-js/react';
 import Typography from '../../../styles/styled/typography';
 import {css} from '@emotion/react';
 import {theme} from '../../../styles/theme';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const components = {
   h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
