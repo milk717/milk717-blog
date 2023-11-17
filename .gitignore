@@ -5,3 +5,4 @@ src/gatsby-types.d.ts
 *.css
 *.css.map
 .env
+content/.obsidian
