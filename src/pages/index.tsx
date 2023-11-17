@@ -1,8 +1,8 @@
 import * as React from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
-import {HomeContent} from '../components/home/HomeContent';
 import HomeLayout from '../components/layout/HomeLayout';
+import {HomeContent} from '../components/home/HomeContent';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
   return (
@@ -16,22 +16,22 @@ export default IndexPage;
 
 export const query = graphql`
   query BlogPostList {
-    allMarkdownRemark {
+    allMdx(sort: {frontmatter: {date: DESC}}) {
       edges {
         node {
           id
+          excerpt(pruneLength: 250)
           frontmatter {
             slug
-            title
-            date(formatString: "YYYY-MM-DD")
+            date
             category
+            title
             thumbnail {
               childImageSharp {
                 gatsbyImageData
               }
             }
           }
-          excerpt
         }
       }
     }

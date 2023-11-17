@@ -26,7 +26,7 @@ thumbnail: "./thumbnail.png"
 파일 내에서 처리되어야 한다는 것입니다. 때문에 이에 대한 서버 설정을 별도로 하지 않으면 /user 경로로 이동시 404페이지가 반환됩니다.
 따라서 Nginx등의 웹 서버와 함께 배포해서 모든 경로 요청을 index.html로 리다이랙션 하는 로직을 구현해야 합니다.
 
-![곰터뷰는 왜 Cloudflare를 사용해서 배포하게 되었을까-19](./images/image-19.png)
+![곰터뷰는 왜 Cloudflare를 사용해서 배포하게 되었을까-19](images/image-19.png)
 
 ## Docker를 사용해서 배포하기
 

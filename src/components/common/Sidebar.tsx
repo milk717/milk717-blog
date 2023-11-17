@@ -25,14 +25,14 @@ export const Sidebar = () => {
         list={
           useStaticQuery(graphql`
             query BlogTagsList {
-              allMarkdownRemark {
+              allMdx {
                 group(field: {frontmatter: {tags: SELECT}}) {
                   text: fieldValue
                   subText: totalCount
                 }
               }
             }
-          `).allMarkdownRemark.group
+          `).allMdx.group
         }
       />
     </div>

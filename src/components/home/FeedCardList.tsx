@@ -8,7 +8,7 @@ import Typography from '../../styles/styled/typography';
 
 const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
   const theme = useTheme();
-  const posts = data.allMarkdownRemark?.edges;
+  const posts = data.allMdx?.edges;
 
   return (
     <div
