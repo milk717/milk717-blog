@@ -45,6 +45,10 @@ export const ListBox: FC<Props> = ({title, list}) => {
               <p
                 css={css`
                   font-size: 1rem;
+                  cursor: pointer;
+                  &:hover {
+                    text-decoration: underline;
+                  }
                 `}>
                 {text}
               </p>

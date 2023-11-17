@@ -39,6 +39,10 @@ export const Nav = () => {
               justify-content: flex-start;
               align-items: center;
               column-gap: 1rem;
+
+              &:hover {
+                text-decoration: underline;
+              }
             `}>
             <Typography.Medium status={location.pathname === item.path}>
               {item.label}

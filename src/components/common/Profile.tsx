@@ -6,8 +6,7 @@ import {GmailDarkIcon} from '../../icons/GmailIcon';
 import {LinkedInIcon} from '../../icons/LinkedInIcon';
 import {css} from '@emotion/react';
 
-type Props = {};
-export const Profile: React.FC<Props> = () => {
+export const Profile: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
