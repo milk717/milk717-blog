@@ -10,6 +10,8 @@ export const Sidebar = () => {
   return (
     <div
       css={css`
+        position: sticky;
+        top: ${theme.size.areaGap};
         display: grid;
         grid-template-columns: 1fr;
         row-gap: ${theme.size.areaGap};

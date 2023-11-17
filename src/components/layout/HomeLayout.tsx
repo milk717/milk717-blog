@@ -28,7 +28,6 @@ const HomeLayout: FC<PropsWithChildren> = ({children}) => {
             grid-template-columns: minmax(auto, 600px) 1fr;
             grid-template-rows: calc(${theme.size.navHeight} * 1) auto;
             gap: ${theme.size.areaGap};
-            height: calc(100vh - calc(${theme.size.areaGap} * 2));
             > *:nth-child(1) {
               grid-area: 1 / 1 / 2 / 3;
             }
@@ -60,6 +59,8 @@ const HomeLayout: FC<PropsWithChildren> = ({children}) => {
           <section>
             <div
               css={css`
+                position: sticky;
+                top: ${theme.size.areaGap};
                 display: flex;
                 flex-direction: column;
                 row-gap: ${theme.size.areaGap};
