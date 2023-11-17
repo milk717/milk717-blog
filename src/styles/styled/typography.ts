@@ -47,6 +47,10 @@ const P = styled.h6`
   font-family: 'Pretendard', serif;
   font-size: ${({theme}) => theme.fontSizes.base};
   font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.004rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 `;
 
 const Medium = styled.p<{status: boolean}>`
