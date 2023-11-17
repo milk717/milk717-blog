@@ -16,10 +16,15 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
             display: flex;
             flex-direction: column;
             row-gap: 2rem;
-            margin: 2rem;
+            margin: 0 2vw;
             padding: 1.5rem;
             border-radius: 40px;
             background-color: ${theme.colors.grayscaleWhite};
+
+            @media (max-width: ${theme.breakpoints.mobileL}) {
+              margin: 0;
+              padding: 0.75rem;
+            }
           `}>
           {children}
         </div>

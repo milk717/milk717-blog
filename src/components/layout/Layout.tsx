@@ -1,10 +1,12 @@
 import React, {FC, PropsWithChildren} from 'react';
-import {css, ThemeProvider} from '@emotion/react';
+import {css, Global, ThemeProvider} from '@emotion/react';
 import {theme} from '../../styles/theme';
+import _global from '../../styles/theme/_global';
 
 const Layout: FC<PropsWithChildren> = ({children}) => {
   return (
     <ThemeProvider theme={theme}>
+      <Global styles={_global} />
       <div
         css={css`
           position: fixed;

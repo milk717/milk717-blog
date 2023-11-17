@@ -36,6 +36,7 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
       <div
         css={css`
           display: flex;
+          flex-wrap: wrap;
           column-gap: 0.5rem;
         `}>
         {tags?.map(tag => (
