@@ -3,6 +3,7 @@ import {graphql, PageProps} from 'gatsby';
 import PostHead from '../components/post/PostHead';
 import PostLayout from '../components/layout/PostLayout';
 import MarkdownComponents from '../components/mdx/MarkdownComponents';
+import {css} from '@emotion/react';
 
 const BlogPostTemplate = ({
   data,
@@ -12,7 +13,13 @@ const BlogPostTemplate = ({
   return (
     <PostLayout>
       <PostHead title={title} category={category} tags={tags} />
-      <MarkdownComponents>{children}</MarkdownComponents>
+      <MarkdownComponents>
+        <article css={css`
+          max-width: 48rem;
+        `}>
+          {children}
+        </article>
+      </MarkdownComponents>
     </PostLayout>
   );
 };

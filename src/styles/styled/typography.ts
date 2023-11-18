@@ -5,6 +5,7 @@ const H1 = styled.h1`
   font-family: 'Pretendard', serif;
   font-size: ${({theme}) => theme.fontSizes.xxxl};
   font-weight: 700;
+  margin: 0.5rem 0;
 `;
 
 const H2 = styled.h2`
@@ -12,6 +13,7 @@ const H2 = styled.h2`
   font-family: 'Pretendard', serif;
   font-size: ${({theme}) => theme.fontSizes.xxl};
   font-weight: 700;
+  margin: 0.5rem 0;
 `;
 
 const H3 = styled.h3`
@@ -19,6 +21,7 @@ const H3 = styled.h3`
   font-family: 'Pretendard', serif;
   font-size: ${({theme}) => theme.fontSizes.xl};
   font-weight: 600;
+  margin: 0.5rem 0;
 `;
 
 const H4 = styled.h4`
@@ -26,6 +29,7 @@ const H4 = styled.h4`
   font-family: 'Pretendard', serif;
   font-size: ${({theme}) => theme.fontSizes.lg};
   font-weight: 600;
+  margin: 0.5rem 0;
 `;
 
 const H5 = styled.h5`
@@ -33,6 +37,7 @@ const H5 = styled.h5`
   font-family: 'Pretendard', serif;
   font-size: ${({theme}) => theme.fontSizes.md};
   font-weight: 500;
+  margin: 0.5rem 0;
 `;
 
 const H6 = styled.h6`
@@ -40,6 +45,7 @@ const H6 = styled.h6`
   font-family: 'Pretendard', serif;
   font-size: ${({theme}) => theme.fontSizes.base};
   font-weight: 500;
+  margin: 0.5rem 0;
 `;
 
 const P = styled.h6`
@@ -51,6 +57,7 @@ const P = styled.h6`
   letter-spacing: -0.004rem;
   word-break: keep-all;
   overflow-wrap: break-word;
+  margin: 0.5rem 0;
 `;
 
 const Medium = styled.p<{status: boolean}>`

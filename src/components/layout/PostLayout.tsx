@@ -8,16 +8,17 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
     <Layout>
       <main
         css={css`
-          max-width: 65rem;
+          max-width: 60rem;
           margin: 1rem auto;
         `}>
         <div
           css={css`
             display: flex;
             flex-direction: column;
+            align-items: center;
             row-gap: 2rem;
-            margin: 0 2vw;
             padding: 1.5rem;
+            margin: 0 auto;
             border-radius: 40px;
             background-color: ${theme.colors.grayscaleWhite};
 
