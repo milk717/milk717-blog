@@ -6,3 +6,4 @@ src/gatsby-types.d.ts
 *.css.map
 .env
 content/.obsidian
+.idea
