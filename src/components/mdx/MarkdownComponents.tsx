@@ -47,6 +47,7 @@ const components = {
       {...props}
       css={css`
         padding-left: 1rem;
+        margin: 1rem 0;
       `}>
       {props.children}
     </ul>
@@ -56,6 +57,7 @@ const components = {
       {...props}
       css={css`
         padding-left: 1rem;
+        margin: 1rem 0;
       `}>
       {props.children}
     </ol>
@@ -64,7 +66,7 @@ const components = {
     <li
       {...props}
       css={css`
-        font-size: 1.125rem;
+        font-size: 1rem;
         line-height: 1.7;
         letter-spacing: -0.004rem;
         word-break: keep-all;
