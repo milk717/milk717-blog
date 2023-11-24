@@ -2,7 +2,7 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHammer} from '@fortawesome/free-solid-svg-icons';
 import {css, useTheme} from '@emotion/react';
-import Typography from '../../styles/styled/typography';
+import Typography from './Typography/Typography';
 
 export const Hammer = () => {
   const theme = useTheme();
@@ -34,7 +34,9 @@ export const Hammer = () => {
           animation: hammerAnimation 0.5s infinite;
         `}
       />
-      <Typography.H2>준비중</Typography.H2>
+      <Typography component="h2" variant="h2">
+        준비중
+      </Typography>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFolder} from '@fortawesome/free-solid-svg-icons';
 import {GatsbyImage} from 'gatsby-plugin-image';
 import {css, useTheme} from '@emotion/react';
-import Typography from '../../styles/styled/typography';
+import Typography from '../common/Typography/Typography';
 
 const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
   const theme = useTheme();
@@ -61,12 +61,16 @@ const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
                 size="1x"
                 color={theme.colors.grayscale02}
               />
-              <Typography.Weak>{node.frontmatter?.category}</Typography.Weak>
+              <Typography component="span" variant="weak">
+                {node.frontmatter?.category}
+              </Typography>
             </div>
-            <Typography.Medium status={false}>
+            <Typography component="span" variant="medium">
               {node.frontmatter?.title}
-            </Typography.Medium>
-            <Typography.Weak>{node.frontmatter?.date}</Typography.Weak>
+            </Typography>
+            <Typography component="span" variant="weak">
+              {node.frontmatter?.date}
+            </Typography>
           </div>
         </Link>
       ))}

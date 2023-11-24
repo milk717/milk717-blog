@@ -3,7 +3,7 @@ import {Link} from 'gatsby';
 import React from 'react';
 import {Box} from './Box';
 import {css} from '@emotion/react';
-import Typography from '../../styles/styled/typography';
+import Typography from './Typography/Typography';
 
 const menuItems = [
   {path: '/', label: 'Home'},
@@ -44,9 +44,14 @@ export const Nav = () => {
                 text-decoration: underline;
               }
             `}>
-            <Typography.Medium status={location.pathname === item.path}>
+            <Typography
+              component="span"
+              variant="medium"
+              css={css`
+                font-weight: ${location.pathname === item.path ? 700 : 400};
+              `}>
               {item.label}
-            </Typography.Medium>
+            </Typography>
           </Link>
         ))}
       </div>

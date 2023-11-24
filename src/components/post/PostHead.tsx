@@ -1,9 +1,9 @@
 import React from 'react';
-import Typography from '../../styles/styled/typography';
 import {css} from '@emotion/react';
 import {theme} from '../../styles/theme';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFolder} from '@fortawesome/free-solid-svg-icons';
+import Typography from '../common/Typography/Typography';
 
 type PostHeadParam = {
   title: string | null;
@@ -19,7 +19,6 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
         flex-direction: column;
         align-items: flex-start;
         row-gap: 1rem;
-        //max-width: 48rem;
       `}>
       <div
         css={css`
@@ -31,15 +30,11 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
           border-radius: 1rem;
         `}>
         <FontAwesomeIcon icon={faFolder} color={theme.colors.colorPoint03} />
-        <Typography.P>{category}</Typography.P>
+        <Typography>{category}</Typography>
       </div>
-      <Typography.H1
-        css={css`
-          word-break: keep-all;
-          overflow-wrap: break-word;
-        `}>
+      <Typography component="h1" variant="h1">
         {title}
-      </Typography.H1>
+      </Typography>
       <div
         css={css`
           display: flex;
@@ -47,15 +42,16 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
           gap: 0.5rem;
         `}>
         {tags?.map(tag => (
-          <Typography.P
+          <Typography
+            component="span"
+            variant="span"
             css={css`
-              font-size: 0.875rem;
               padding: 0.25rem 0.5rem;
               background-color: ${theme.colors.colorSurface02};
               border-radius: 0.5rem;
             `}>
             {tag}
-          </Typography.P>
+          </Typography>
         )) ?? null}
       </div>
     </div>

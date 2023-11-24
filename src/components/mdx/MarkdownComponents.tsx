@@ -1,40 +1,52 @@
 import * as React from 'react';
 import {HTMLAttributes, PropsWithChildren} from 'react';
-import Typography from '../../styles/styled/typography';
 import {theme} from '../../styles/theme';
 import {MDXProvider} from '@mdx-js/react';
 import {css} from '@emotion/react';
 import 'prismjs/themes/prism-tomorrow.css';
+import Typography from '../common/Typography/Typography';
 
 const components = {
   h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Typography.H1 {...props}>{props.children}</Typography.H1>
+    <Typography component="h1" variant="h1" {...props}>
+      {props.children}
+    </Typography>
   ),
   h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Typography.H2 {...props}>{props.children}</Typography.H2>
+    <Typography component="h2" variant="h2" {...props}>
+      {props.children}
+    </Typography>
   ),
   h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Typography.H3 {...props}>{props.children}</Typography.H3>
+    <Typography component="h3" variant="h3" {...props}>
+      {props.children}
+    </Typography>
   ),
   h4: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Typography.H4 {...props}>{props.children}</Typography.H4>
+    <Typography component="h4" variant="h4" {...props}>
+      {props.children}
+    </Typography>
   ),
   h5: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Typography.H5 {...props}>{props.children}</Typography.H5>
+    <Typography component="h5" variant="h5" {...props}>
+      {props.children}
+    </Typography>
   ),
   h6: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Typography.H6 {...props}>{props.children}</Typography.H6>
+    <Typography component="h6" variant="h6" {...props}>
+      {props.children}
+    </Typography>
   ),
   p: (props: HTMLAttributes<HTMLParagraphElement>) => (
-    <Typography.P {...props}>{props.children}</Typography.P>
+    <Typography component="p" variant="p" {...props}>
+      {props.children}
+    </Typography>
   ),
   ul: (props: HTMLAttributes<HTMLUListElement>) => (
     <ul
       {...props}
       css={css`
-        font-size: 1.125rem;
         padding-left: 1rem;
-        line-height: 1.7;
       `}>
       {props.children}
     </ul>
@@ -43,9 +55,7 @@ const components = {
     <ol
       {...props}
       css={css`
-        font-size: 1.125rem;
         padding-left: 1rem;
-        line-height: 1.7;
       `}>
       {props.children}
     </ol>
@@ -64,17 +74,17 @@ const components = {
     </li>
   ),
   a: (props: HTMLAttributes<HTMLAnchorElement>) => (
-    <a
-      {...props}
+    <Typography
+      component="a"
+      variant="link"
       css={css`
-        font-size: 1.125rem;
-        line-height: 1.7;
-        letter-spacing: -0.004rem;
-        word-break: keep-all;
-        overflow-wrap: break-word;
-      `}>
+        &:hover {
+          text-decoration: underline;
+        }
+      `}
+      {...props}>
       {props.children}
-    </a>
+    </Typography>
   ),
   code: (props: HTMLAttributes<HTMLElement>) => (
     <code
