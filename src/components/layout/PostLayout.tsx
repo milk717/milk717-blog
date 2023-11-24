@@ -10,6 +10,8 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
         css={css`
           max-width: 60rem;
           margin: 1rem auto;
+          border-radius: 40px;
+          background-color: ${theme.colors.grayscaleWhite};
         `}>
         <div
           css={css`
@@ -19,8 +21,7 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
             row-gap: 2rem;
             padding: 1.5rem;
             margin: 0 auto;
-            border-radius: 40px;
-            background-color: ${theme.colors.grayscaleWhite};
+            max-width: 48rem;
 
             @media (max-width: ${theme.breakpoints.mobileL}) {
               margin: 0;

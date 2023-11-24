@@ -19,7 +19,7 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
         flex-direction: column;
         align-items: flex-start;
         row-gap: 1rem;
-        max-width: 48rem;
+        //max-width: 48rem;
       `}>
       <div
         css={css`
@@ -33,10 +33,13 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
         <FontAwesomeIcon icon={faFolder} color={theme.colors.colorPoint03} />
         <Typography.P>{category}</Typography.P>
       </div>
-      <Typography.H1 css={css`
-        word-break: keep-all;
-        overflow-wrap: break-word;
-      `}>{title}</Typography.H1>
+      <Typography.H1
+        css={css`
+          word-break: keep-all;
+          overflow-wrap: break-word;
+        `}>
+        {title}
+      </Typography.H1>
       <div
         css={css`
           display: flex;

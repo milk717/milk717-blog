@@ -14,9 +14,10 @@ const BlogPostTemplate = ({
     <PostLayout>
       <PostHead title={title} category={category} tags={tags} />
       <MarkdownComponents>
-        <article css={css`
-          max-width: 48rem;
-        `}>
+        <article
+          css={css`
+            max-width: 100%;
+          `}>
           {children}
         </article>
       </MarkdownComponents>
