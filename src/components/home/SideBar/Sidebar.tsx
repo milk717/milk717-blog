@@ -1,7 +1,7 @@
 import {css} from '@emotion/react';
 import {theme} from '../../../styles/theme';
 import {Profile} from './Profile';
-import {Search} from '../../common/Search';
+import {Search} from './Search';
 import React from 'react';
 import {TagListBox} from './TagListBox';
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Hammer} from '../components/common/Hammer';
 import {Box} from '../components/common/Box';
 import {css} from '@emotion/react';
 import HomeLayout from '../components/layout/HomeLayout';
+import Typography from '../components/common/Typography/Typography';
 
 const InfoPage = () => {
   return (
@@ -15,7 +15,7 @@ const InfoPage = () => {
           height: 100%;
           border-radius: 40px;
         `}>
-        <Hammer />
+        <Typography>준비중</Typography>
       </Box>
     </HomeLayout>
   );

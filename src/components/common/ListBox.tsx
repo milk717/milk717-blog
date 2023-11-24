@@ -1,7 +1,6 @@
 import {Box} from './Box';
 import {css} from '@emotion/react';
 import React, {FC} from 'react';
-import {Hammer} from './Hammer';
 import Typography from './Typography/Typography';
 
 type Props = {
@@ -61,7 +60,9 @@ export const ListBox: FC<Props> = ({title, list}) => {
           ))}
         </div>
       ) : (
-        <Hammer />
+        <Typography component="span" variant="weak">
+          준비중
+        </Typography>
       )}
     </Box>
   );

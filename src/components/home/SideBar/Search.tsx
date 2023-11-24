@@ -1,8 +1,7 @@
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import {Box} from './Box';
+import {Box} from '../../common/Box';
 import {css} from '@emotion/react';
+import {SearchIcon} from '../../../icons/SearchIcon';
 
 export const Search = () => {
   return (
@@ -15,7 +14,7 @@ export const Search = () => {
         column-gap: 16px;
         border-radius: 24px;
       `}>
-      <FontAwesomeIcon icon={faMagnifyingGlass} size="1x" />
+      <SearchIcon />
       <input
         type="text"
         placeholder="Search..."

@@ -2,7 +2,6 @@ import {graphql, useStaticQuery} from 'gatsby';
 import {Box} from '../../common/Box';
 import Typography from '../../common/Typography/Typography';
 import {ReloadIcon} from '../../../icons/ReloadIcon';
-import {Hammer} from '../../common/Hammer';
 import {useEffect, useState} from 'react';
 import {css, keyframes} from '@emotion/react';
 
@@ -81,39 +80,35 @@ export const TagListBox: React.FC<Props> = ({onClick}) => {
           <ReloadIcon />
         </div>
       </div>
-      {list ? (
-        <div
-          css={css`
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            flex-grow: 1;
-          `}>
-          {list.map(({text, subText}: {text: string; subText: string}) => (
-            <div
-              key={text}
-              onClick={() => onClick?.(text)}
-              css={css`
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                cursor: pointer;
-                &:hover {
-                  text-decoration: underline;
-                }
-              `}>
-              <Typography component="span" variant="p">
-                {text}
-              </Typography>
-              <Typography component="span" variant="weak">
-                {subText}
-              </Typography>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <Hammer />
-      )}
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          flex-grow: 1;
+        `}>
+        {list.map(({text, subText}: {text: string; subText: string}) => (
+          <div
+            key={text}
+            onClick={() => onClick?.(text)}
+            css={css`
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              cursor: pointer;
+              &:hover {
+                text-decoration: underline;
+              }
+            `}>
+            <Typography component="span" variant="p">
+              {text}
+            </Typography>
+            <Typography component="span" variant="weak">
+              {subText}
+            </Typography>
+          </div>
+        ))}
+      </div>
     </Box>
   );
 };

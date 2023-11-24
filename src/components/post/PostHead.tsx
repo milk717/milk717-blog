@@ -1,9 +1,8 @@
 import React from 'react';
 import {css} from '@emotion/react';
 import {theme} from '../../styles/theme';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faFolder} from '@fortawesome/free-solid-svg-icons';
 import Typography from '../common/Typography/Typography';
+import {FolderIcon} from '../../icons/FolderIcon';
 
 type PostHeadParam = {
   title: string | null;
@@ -31,7 +30,7 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags, date}) => {
           background: ${theme.colors.colorSurface04};
           border-radius: 1rem;
         `}>
-        <FontAwesomeIcon icon={faFolder} color={theme.colors.colorPoint03} />
+        <FolderIcon />
         <Typography component="span" variant="medium">
           {category}
         </Typography>

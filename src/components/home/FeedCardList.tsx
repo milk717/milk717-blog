@@ -1,11 +1,10 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faFolder} from '@fortawesome/free-solid-svg-icons';
 import {GatsbyImage} from 'gatsby-plugin-image';
 import {css} from '@emotion/react';
 import Typography from '../common/Typography/Typography';
 import {theme} from '../../styles/theme';
+import {FolderIcon} from '../../icons/FolderIcon';
 
 const FeedCardList = ({
   posts,
@@ -58,11 +57,7 @@ const FeedCardList = ({
                 gap: 8px;
                 align-self: stretch;
               `}>
-              <FontAwesomeIcon
-                icon={faFolder}
-                size="1x"
-                color={theme.colors.grayscale02}
-              />
+              <FolderIcon />
               <Typography component="span" variant="weak">
                 {node.frontmatter?.category}
               </Typography>

@@ -28,9 +28,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@emotion/react", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:11.11.1"],\
           ["@emotion/styled", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:11.11.0"],\
-          ["@fortawesome/fontawesome-svg-core", "npm:6.4.2"],\
-          ["@fortawesome/free-solid-svg-icons", "npm:6.4.2"],\
-          ["@fortawesome/react-fontawesome", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:0.2.0"],\
           ["@mdx-js/mdx", "npm:3.0.0"],\
           ["@mdx-js/react", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:2.3.0"],\
           ["@reach/router", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:1.3.4"],\
@@ -3204,62 +3201,6 @@ const RAW_RUNTIME_STATE =
           ["js-yaml", "npm:3.14.1"],\
           ["minimatch", "npm:3.1.2"],\
           ["strip-json-comments", "npm:3.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@fortawesome/fontawesome-common-types", [\
-      ["npm:6.4.2", {\
-        "packageLocation": "./.yarn/unplugged/@fortawesome-fontawesome-common-types-npm-6.4.2-1f8b184e1e/node_modules/@fortawesome/fontawesome-common-types/",\
-        "packageDependencies": [\
-          ["@fortawesome/fontawesome-common-types", "npm:6.4.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@fortawesome/fontawesome-svg-core", [\
-      ["npm:6.4.2", {\
-        "packageLocation": "./.yarn/unplugged/@fortawesome-fontawesome-svg-core-npm-6.4.2-530d31922b/node_modules/@fortawesome/fontawesome-svg-core/",\
-        "packageDependencies": [\
-          ["@fortawesome/fontawesome-svg-core", "npm:6.4.2"],\
-          ["@fortawesome/fontawesome-common-types", "npm:6.4.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@fortawesome/free-solid-svg-icons", [\
-      ["npm:6.4.2", {\
-        "packageLocation": "./.yarn/unplugged/@fortawesome-free-solid-svg-icons-npm-6.4.2-c582f5c032/node_modules/@fortawesome/free-solid-svg-icons/",\
-        "packageDependencies": [\
-          ["@fortawesome/free-solid-svg-icons", "npm:6.4.2"],\
-          ["@fortawesome/fontawesome-common-types", "npm:6.4.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@fortawesome/react-fontawesome", [\
-      ["npm:0.2.0", {\
-        "packageLocation": "../../.yarn/berry/cache/@fortawesome-react-fontawesome-npm-0.2.0-a36215138f-10c0.zip/node_modules/@fortawesome/react-fontawesome/",\
-        "packageDependencies": [\
-          ["@fortawesome/react-fontawesome", "npm:0.2.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:0.2.0", {\
-        "packageLocation": "./.yarn/__virtual__/@fortawesome-react-fontawesome-virtual-91aced58ad/3/.yarn/berry/cache/@fortawesome-react-fontawesome-npm-0.2.0-a36215138f-10c0.zip/node_modules/@fortawesome/react-fontawesome/",\
-        "packageDependencies": [\
-          ["@fortawesome/react-fontawesome", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:0.2.0"],\
-          ["@fortawesome/fontawesome-svg-core", "npm:6.4.2"],\
-          ["@types/fortawesome__fontawesome-svg-core", null],\
-          ["@types/react", "npm:18.2.37"],\
-          ["prop-types", "npm:15.8.1"],\
-          ["react", "npm:18.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@fortawesome/fontawesome-svg-core",\
-          "@types/fortawesome__fontawesome-svg-core",\
-          "@types/react",\
-          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15937,9 +15878,6 @@ const RAW_RUNTIME_STATE =
           ["milk717-blog", "workspace:."],\
           ["@emotion/react", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:11.11.1"],\
           ["@emotion/styled", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:11.11.0"],\
-          ["@fortawesome/fontawesome-svg-core", "npm:6.4.2"],\
-          ["@fortawesome/free-solid-svg-icons", "npm:6.4.2"],\
-          ["@fortawesome/react-fontawesome", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:0.2.0"],\
           ["@mdx-js/mdx", "npm:3.0.0"],\
           ["@mdx-js/react", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:2.3.0"],\
           ["@reach/router", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:1.3.4"],\
