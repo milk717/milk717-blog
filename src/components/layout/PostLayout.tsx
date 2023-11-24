@@ -9,7 +9,7 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
       <main
         css={css`
           max-width: 60rem;
-          margin: 1rem auto;
+          margin: 3rem auto;
           border-radius: 40px;
           background-color: ${theme.colors.grayscaleWhite};
         `}>

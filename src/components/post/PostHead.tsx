@@ -20,6 +20,7 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags, date}) => {
         flex-direction: column;
         align-items: flex-start;
         row-gap: 0.75rem;
+        width: 100%;
       `}>
       <div
         css={css`

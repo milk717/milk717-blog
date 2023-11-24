@@ -1,7 +1,7 @@
 import React, {FC, PropsWithChildren} from 'react';
 import {css} from '@emotion/react';
 import {theme} from '../../styles/theme';
-import {Sidebar} from '../common/Sidebar';
+import {Sidebar} from '../common/SideBar/Sidebar';
 import {Nav} from '../common/Nav';
 import {ListBox} from '../common/ListBox';
 import Layout from './Layout';
