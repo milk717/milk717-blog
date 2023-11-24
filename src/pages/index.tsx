@@ -3,8 +3,8 @@ import {useState} from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
 import HomeLayout from '../components/layout/HomeLayout';
-import {HomeContent} from '../components/home/HomeContent';
 import {Sidebar} from '../components/home/SideBar/Sidebar';
+import {HomeContent} from '../components/home/HomeContent';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
   const [selectedTag, setSelectedTag] = useState('');

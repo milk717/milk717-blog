@@ -20,9 +20,9 @@ const BlogPostTemplate = ({
             max-width: 100%;
           `}>
           {children}
+          <UtterancesComments />
         </article>
       </MarkdownComponents>
-      <UtterancesComments />
     </PostLayout>
   );
 };
