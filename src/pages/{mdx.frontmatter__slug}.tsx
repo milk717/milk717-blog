@@ -9,10 +9,10 @@ const BlogPostTemplate = ({
   data,
   children,
 }: PageProps<Queries.BlogPostQuery>) => {
-  const {title, category, tags} = data.mdx?.frontmatter!;
+  const {title, category, tags, date} = data.mdx?.frontmatter!;
   return (
     <PostLayout>
-      <PostHead title={title} category={category} tags={tags} />
+      <PostHead title={title} category={category} tags={tags} date={date} />
       <MarkdownComponents>
         <article
           css={css`

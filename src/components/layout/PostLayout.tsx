@@ -18,7 +18,7 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
             display: flex;
             flex-direction: column;
             align-items: center;
-            row-gap: 2rem;
+            row-gap: 1rem;
             padding: 1.5rem;
             margin: 0 auto;
             max-width: 48rem;

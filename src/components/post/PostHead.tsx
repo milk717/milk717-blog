@@ -9,16 +9,17 @@ type PostHeadParam = {
   title: string | null;
   category: string | null;
   tags: readonly (string | null)[] | null;
+  date: string | null;
 };
 
-const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
+const PostHead: React.FC<PostHeadParam> = ({title, category, tags, date}) => {
   return (
     <div
       css={css`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        row-gap: 1rem;
+        row-gap: 0.75rem;
       `}>
       <div
         css={css`
@@ -30,11 +31,26 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
           border-radius: 1rem;
         `}>
         <FontAwesomeIcon icon={faFolder} color={theme.colors.colorPoint03} />
-        <Typography>{category}</Typography>
+        <Typography component="span" variant="medium">
+          {category}
+        </Typography>
       </div>
-      <Typography component="h1" variant="h1">
+      <Typography
+        component="h1"
+        variant="h1"
+        css={css`
+          margin: 0;
+        `}>
         {title}
       </Typography>
+      <div
+        css={css`
+          align-self: end;
+        `}>
+        <Typography component="span" variant="weak">
+          {date}
+        </Typography>
+      </div>
       <div
         css={css`
           display: flex;
@@ -44,11 +60,12 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags}) => {
         {tags?.map(tag => (
           <Typography
             component="span"
-            variant="span"
+            variant="weak"
             css={css`
               padding: 0.25rem 0.5rem;
-              background-color: ${theme.colors.colorSurface02};
-              border-radius: 0.5rem;
+              color: ${theme.colors.grayscale03};
+              background-color: ${theme.colors.colorSurface01};
+              border-radius: 1rem;
             `}>
             {tag}
           </Typography>
