@@ -4,6 +4,7 @@ import PostHead from '../components/post/PostHead';
 import PostLayout from '../components/layout/PostLayout';
 import MarkdownComponents from '../components/mdx/MarkdownComponents';
 import {css} from '@emotion/react';
+import {UtterancesComments} from '../components/post/UtterancesComments';
 
 const BlogPostTemplate = ({
   data,
@@ -21,6 +22,7 @@ const BlogPostTemplate = ({
           {children}
         </article>
       </MarkdownComponents>
+      <UtterancesComments />
     </PostLayout>
   );
 };

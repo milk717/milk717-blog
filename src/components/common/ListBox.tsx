@@ -6,7 +6,7 @@ import Typography from './Typography/Typography';
 
 type Props = {
   title: string;
-  list: {text: string; subText: number}[];
+  list?: {text: string; subText: number}[];
 };
 
 export const ListBox: FC<Props> = ({title, list}) => {
