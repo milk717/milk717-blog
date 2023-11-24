@@ -53,7 +53,6 @@ const RAW_RUNTIME_STATE =
           ["prismjs", "npm:1.29.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:18.2.0"],\
-          ["sass", "npm:1.69.5"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -11462,7 +11461,7 @@ const RAW_RUNTIME_STATE =
           ["@types/sass", null],\
           ["gatsby", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:5.12.9"],\
           ["resolve-url-loader", "npm:3.1.5"],\
-          ["sass", "npm:1.69.5"],\
+          ["sass", null],\
           ["sass-loader", "virtual:3f26a349efe53e24917024ea60b4375b1a4726b4c4957adc92e093f373e57778e8413e7ca5df922b1377efc62552307f6146b685c22ce2c9c45b4db893040db2#npm:10.4.1"]\
         ],\
         "packagePeers": [\
@@ -12979,13 +12978,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/immutable-npm-3.7.6-1c13b39359-10c0.zip/node_modules/immutable/",\
         "packageDependencies": [\
           ["immutable", "npm:3.7.6"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:4.3.4", {\
-        "packageLocation": "../../.yarn/berry/cache/immutable-npm-4.3.4-2f54cf641b-10c0.zip/node_modules/immutable/",\
-        "packageDependencies": [\
-          ["immutable", "npm:4.3.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15903,7 +15895,6 @@ const RAW_RUNTIME_STATE =
           ["prismjs", "npm:1.29.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:d9c620ca37f5166e0239817fde1220a6065e9942cbc31648d7aaeb2f33e7467c99a2110b65c981dc1dd21f43275c7c6e189c06ce42724d86805d5579fe752264#npm:18.2.0"],\
-          ["sass", "npm:1.69.5"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -19434,18 +19425,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["sass", [\
-      ["npm:1.69.5", {\
-        "packageLocation": "../../.yarn/berry/cache/sass-npm-1.69.5-3f0210c9f9-10c0.zip/node_modules/sass/",\
-        "packageDependencies": [\
-          ["sass", "npm:1.69.5"],\
-          ["chokidar", "npm:3.5.3"],\
-          ["immutable", "npm:4.3.4"],\
-          ["source-map-js", "npm:1.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["sass-loader", [\
       ["npm:10.4.1", {\
         "packageLocation": "../../.yarn/berry/cache/sass-loader-npm-10.4.1-2a13914f69-10c0.zip/node_modules/sass-loader/",\
@@ -19467,7 +19446,7 @@ const RAW_RUNTIME_STATE =
           ["loader-utils", "npm:2.0.4"],\
           ["neo-async", "npm:2.6.2"],\
           ["node-sass", null],\
-          ["sass", "npm:1.69.5"],\
+          ["sass", null],\
           ["schema-utils", "npm:3.3.0"],\
           ["semver", "npm:7.5.4"],\
           ["webpack", null]\
