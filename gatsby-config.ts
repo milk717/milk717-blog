@@ -23,6 +23,18 @@ const config: GatsbyConfig = {
         head: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Milk717의 개발 블로그 입니다.`,
+        short_name: `Milk717 Blog`,
+        start_url: `/`,
+        background_color: `#EFF1F7`,
+        theme_color: `#2C4C8A`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+      },
+    },
     'gatsby-plugin-emotion',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
