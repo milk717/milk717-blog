@@ -7,8 +7,8 @@ import Typography from './Typography/Typography';
 
 const menuItems = [
   {path: '/', label: 'Home'},
-  {path: '/category/', label: 'Categories'},
-  {path: '/about/', label: 'About'},
+  // {path: '/category/', label: 'Categories'},
+  // {path: '/about/', label: 'About'},
 ];
 export const Nav = () => {
   const location = useLocation();
