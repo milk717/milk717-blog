@@ -1,12 +1,12 @@
 import React, {FC, PropsWithChildren} from 'react';
 import {css} from '@emotion/react';
 import {theme} from '../../styles/theme';
-import {Sidebar} from '../common/SideBar/Sidebar';
 import {Nav} from '../common/Nav';
 import {ListBox} from '../common/ListBox';
 import Layout from './Layout';
 
 const HomeLayout: FC<PropsWithChildren> = ({children}) => {
+  const childrenArray = React.Children.toArray(children);
   return (
     <Layout>
       <div
@@ -19,9 +19,7 @@ const HomeLayout: FC<PropsWithChildren> = ({children}) => {
             flex-direction: column;
           }
         `}>
-        <aside>
-          <Sidebar />
-        </aside>
+        <aside>{childrenArray.at(0)}</aside>
         <main
           css={css`
             display: grid;
@@ -54,7 +52,7 @@ const HomeLayout: FC<PropsWithChildren> = ({children}) => {
             css={css`
               overflow-y: scroll;
             `}>
-            {children}
+            {childrenArray.at(1)}
           </section>
           <section>
             <div

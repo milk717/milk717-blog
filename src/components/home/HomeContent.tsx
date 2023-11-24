@@ -1,14 +1,13 @@
-import {css, useTheme} from '@emotion/react';
+import {css} from '@emotion/react';
 import FeedCardList from './FeedCardList';
 import * as React from 'react';
 import {FC} from 'react';
 
 type Props = {
-  data: Queries.BlogPostListQuery;
+  data: Queries.BlogPostListQuery['allMdx']['edges'];
 };
 
 export const HomeContent: FC<Props> = ({data}) => {
-  const theme = useTheme();
   return (
     <div
       css={css`
@@ -16,7 +15,7 @@ export const HomeContent: FC<Props> = ({data}) => {
         flex-direction: column;
         row-gap: 1.5rem;
       `}>
-      <FeedCardList data={data} />
+      <FeedCardList posts={data} />
     </div>
   );
 };

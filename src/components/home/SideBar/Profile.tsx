@@ -1,9 +1,9 @@
 import React from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
-import {Box} from './Box';
-import {GithubMarkIcon} from '../../icons/GithubMarkIcon';
-import {GmailDarkIcon} from '../../icons/GmailIcon';
-import {LinkedInIcon} from '../../icons/LinkedInIcon';
+import {Box} from '../../common/Box';
+import {GithubMarkIcon} from '../../../icons/GithubMarkIcon';
+import {GmailDarkIcon} from '../../../icons/GmailIcon';
+import {LinkedInIcon} from '../../../icons/LinkedInIcon';
 import {css} from '@emotion/react';
 
 export const Profile: React.FC = () => {

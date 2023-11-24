@@ -3,13 +3,15 @@ import {Link} from 'gatsby';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFolder} from '@fortawesome/free-solid-svg-icons';
 import {GatsbyImage} from 'gatsby-plugin-image';
-import {css, useTheme} from '@emotion/react';
+import {css} from '@emotion/react';
 import Typography from '../common/Typography/Typography';
+import {theme} from '../../styles/theme';
 
-const FeedCardList = ({data}: {data: Queries.BlogPostListQuery}) => {
-  const theme = useTheme();
-  const posts = data.allMdx?.edges;
-
+const FeedCardList = ({
+  posts,
+}: {
+  posts: Queries.BlogPostListQuery['allMdx']['edges'];
+}) => {
   return (
     <div
       css={css`

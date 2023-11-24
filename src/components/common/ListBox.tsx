@@ -6,9 +6,10 @@ import {Hammer} from './Hammer';
 type Props = {
   title: string;
   list?: {text: string; subText: string}[];
+  onClick?: (value: string) => void;
 };
 
-export const ListBox: FC<Props> = ({title, list}) => {
+export const ListBox: FC<Props> = ({title, list, onClick}) => {
   return (
     <Box
       style={css`
@@ -37,6 +38,7 @@ export const ListBox: FC<Props> = ({title, list}) => {
           `}>
           {list.map(({text, subText}) => (
             <div
+              onClick={() => onClick?.(text)}
               css={css`
                 display: flex;
                 justify-content: space-between;

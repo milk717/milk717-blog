@@ -1,13 +1,27 @@
 import * as React from 'react';
+import {useState} from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
 import HomeLayout from '../components/layout/HomeLayout';
 import {HomeContent} from '../components/home/HomeContent';
+import {Sidebar} from '../components/home/SideBar/Sidebar';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
+  const [selectedTag, setSelectedTag] = useState('');
+
+  const filteredPosts = data.allMdx.edges.filter(
+    edge =>
+      selectedTag === '' || edge.node.frontmatter?.tags?.includes(selectedTag),
+  );
+
+  const handleTagFilterClick = (tags: string) => {
+    setSelectedTag(tags);
+  };
+
   return (
     <HomeLayout>
-      <HomeContent data={data} />
+      <Sidebar onTagFilterClick={handleTagFilterClick} />
+      <HomeContent data={filteredPosts} />
     </HomeLayout>
   );
 };
@@ -26,6 +40,7 @@ export const query = graphql`
             date
             category
             title
+            tags
             thumbnail {
               childImageSharp {
                 gatsbyImageData
