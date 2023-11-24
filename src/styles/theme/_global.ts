@@ -75,7 +75,7 @@ const _global = css`
 
   @media (max-width: ${theme.breakpoints.mobileL}) {
     html {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 `;
