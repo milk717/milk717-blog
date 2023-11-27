@@ -78,5 +78,11 @@ const _global = css`
       font-size: 14px;
     }
   }
+
+  .gatsby-resp-image-figcaption {
+    font-size: 0.9rem;
+    color: grey;
+    text-align: center;
+  }
 `;
 export default _global;

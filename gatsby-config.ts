@@ -56,7 +56,8 @@ const config: GatsbyConfig = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
-              wrapperStyle: 'margin: 1.75rem auto;',
+              wrapperStyle: 'margin: auto; height: auto;',
+              showCaptions: true,
             },
           },
           {

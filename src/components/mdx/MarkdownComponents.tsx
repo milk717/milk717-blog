@@ -102,14 +102,6 @@ const components = {
       {props.children}
     </code>
   ),
-  img: (props: HTMLAttributes<HTMLImageElement>) => (
-    <img
-      {...props}
-      css={css`
-        border-radius: 1.5rem;
-      `}
-    />
-  ),
 };
 
 const MarkdownComponents: React.FC<PropsWithChildren> = ({children}) => {
