@@ -25,7 +25,7 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
 
             @media (max-width: ${theme.breakpoints.mobileL}) {
               margin: 0;
-              padding: 0.75rem;
+              padding: 1.25rem;
             }
           `}>
           {children}
