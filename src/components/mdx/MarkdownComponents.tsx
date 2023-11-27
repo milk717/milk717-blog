@@ -80,6 +80,8 @@ const components = {
       component="a"
       variant="link"
       css={css`
+        display: inline-block;
+        font-size: inherit;
         &:hover {
           text-decoration: underline;
         }
