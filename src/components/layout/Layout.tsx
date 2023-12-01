@@ -2,6 +2,7 @@ import React, {FC, PropsWithChildren} from 'react';
 import {css, Global, ThemeProvider} from '@emotion/react';
 import {theme} from '../../styles/theme';
 import _global from '../../styles/theme/_global';
+import {Header} from '../common/Header';
 
 const Layout: FC<PropsWithChildren> = ({children}) => {
   return (
@@ -18,7 +19,16 @@ const Layout: FC<PropsWithChildren> = ({children}) => {
           z-index: -1;
         `}
       />
-      {children}
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          row-gap: ${theme.size.areaGap};
+          padding: ${theme.size.areaGap};
+        `}>
+        <Header />
+        {children}
+      </div>
     </ThemeProvider>
   );
 };

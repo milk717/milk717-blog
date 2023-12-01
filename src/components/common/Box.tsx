@@ -1,7 +1,6 @@
 import React, {ReactNode} from 'react';
-import {css, Theme, useTheme} from '@emotion/react';
+import {css, Interpolation, Theme, useTheme} from '@emotion/react';
 import {ThemeType} from '../../styles/theme';
-import {Interpolation} from '@emotion/serialize';
 
 type Props = {
   children: ReactNode;
@@ -15,7 +14,7 @@ export const Box: React.FC<Props> = ({children, style}) => {
       css={[
         css`
           border: 1px solid ${theme.colors.grayscaleWhite};
-          opacity: 0.64;
+          opacity: 0.8;
           background: ${theme.gradients.surface};
           box-shadow: ${theme.shadows.surface};
         `,

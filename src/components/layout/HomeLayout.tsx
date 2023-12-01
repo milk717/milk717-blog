@@ -14,7 +14,6 @@ const HomeLayout: FC<PropsWithChildren> = ({children}) => {
           display: flex;
           justify-content: center;
           gap: ${theme.size.areaGap};
-          padding: ${theme.size.areaGap};
           @media (max-width: ${theme.breakpoints.tablet}) {
             flex-direction: column;
           }
