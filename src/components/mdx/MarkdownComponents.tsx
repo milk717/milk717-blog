@@ -5,6 +5,7 @@ import {MDXProvider} from '@mdx-js/react';
 import {css} from '@emotion/react';
 import 'prismjs/themes/prism-tomorrow.css';
 import Typography from '../common/Typography/Typography';
+import {EditIcon} from '../../icons/EditIcon';
 
 const components = {
   h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -112,6 +113,33 @@ const components = {
       `}>
       {props.children}
     </code>
+  ),
+  blockquote: (props: HTMLAttributes<HTMLElement>) => (
+    <div
+      css={css`
+        display: flex;
+        flex-direction: column;
+        background-color: ${theme.colors.colorSurface04};
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        margin: 0.75rem 0;
+      `}>
+      <Typography
+        component="p"
+        css={css`
+          display: flex;
+          align-items: center;
+          column-gap: 0.5rem;
+          margin: 0;
+          font-weight: 600;
+          font-size: 1rem;
+          color: ${theme.colors.colorPoint03};
+        `}>
+        <EditIcon />
+        Note
+      </Typography>
+      <blockquote {...props}>{props.children}</blockquote>
+    </div>
   ),
 };
 
