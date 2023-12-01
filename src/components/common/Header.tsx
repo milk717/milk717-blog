@@ -7,7 +7,7 @@ import {Link} from 'gatsby';
 export const Header = () => {
   const menuItems = [
     {path: '/', label: 'Home'},
-    {path: '/category/', label: 'Categories'},
+    // {path: '/category/', label: 'Categories'},
     // {path: '/about/', label: 'About'},
   ];
   return (
