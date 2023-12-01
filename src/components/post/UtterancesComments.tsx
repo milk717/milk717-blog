@@ -20,10 +20,6 @@ export const UtterancesComments: React.FC = React.memo(() => {
     });
 
     containerRef.current?.appendChild(utterances);
-
-    return () => {
-      containerRef.current?.removeChild(utterances);
-    };
   }, []);
 
   return <section ref={containerRef} />;
