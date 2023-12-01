@@ -83,6 +83,7 @@ const components = {
         display: inline-block;
         font-size: inherit;
         font-weight: inherit;
+        margin: 0;
         &:hover {
           text-decoration: underline;
         }
