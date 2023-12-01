@@ -42,6 +42,15 @@ const components = {
       {props.children}
     </Typography>
   ),
+  span: (props: HTMLAttributes<HTMLSpanElement>) => (
+    <span
+      {...props}
+      css={css`
+        white-space: normal;
+      `}>
+      {props.children}
+    </span>
+  ),
   ul: (props: HTMLAttributes<HTMLUListElement>) => (
     <ul
       {...props}
