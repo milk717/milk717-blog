@@ -1,8 +1,6 @@
 import React, {FC, PropsWithChildren} from 'react';
 import {css} from '@emotion/react';
 import {theme} from '../../styles/theme';
-import {Nav} from '../common/Nav';
-import {ListBox} from '../common/ListBox';
 import Layout from './Layout';
 
 const HomeLayout: FC<PropsWithChildren> = ({children}) => {
@@ -21,51 +19,24 @@ const HomeLayout: FC<PropsWithChildren> = ({children}) => {
         <aside>{childrenArray.at(0)}</aside>
         <main
           css={css`
-            display: grid;
-            grid-template-columns: minmax(auto, 600px) 1fr;
-            grid-template-rows: calc(${theme.size.navHeight} * 1) auto;
+            display: flex;
             gap: ${theme.size.areaGap};
-            > *:nth-child(1) {
-              grid-area: 1 / 1 / 2 / 3;
-            }
-            @media (max-width: ${theme.breakpoints.laptop}) {
-              grid-template-columns: 1fr;
-              column-gap: 0;
-              > *:nth-child(1) {
-                grid-area: 1 / 1;
-              }
-              > *:nth-child(3) {
-                display: none;
-              }
-            }
+            max-width: 48rem;
           `}>
-          <nav
-            css={css`
-              grid-area: 1 / 1 / 2 / 3;
-              align-self: start;
-              z-index: 1;
-            `}>
-            <Nav />
-          </nav>
-          <section
-            css={css`
-              overflow-y: scroll;
-            `}>
-            {childrenArray.at(1)}
-          </section>
-          <section>
-            <div
-              css={css`
-                position: sticky;
-                top: calc(${theme.size.areaGap} * 4);
-                display: flex;
-                flex-direction: column;
-                row-gap: ${theme.size.areaGap};
-              `}>
-              {/*<ListBox title={'인기 게시글'} />*/}
-              <ListBox title={'최근 댓글'} />
-            </div>
-          </section>
+          <section>{childrenArray.at(1)}</section>
+          {/*<section>*/}
+          {/*  <div*/}
+          {/*    css={css`*/}
+          {/*      position: sticky;*/}
+          {/*      top: calc(${theme.size.areaGap} * 4);*/}
+          {/*      display: flex;*/}
+          {/*      flex-direction: column;*/}
+          {/*      row-gap: ${theme.size.areaGap};*/}
+          {/*    `}>*/}
+          {/*    <ListBox title={'인기 게시글'} />*/}
+          {/*    /!*<ListBox title={'최근 댓글'} />*!/*/}
+          {/*  </div>*/}
+          {/*</section>*/}
         </main>
       </div>
     </Layout>

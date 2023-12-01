@@ -9,7 +9,7 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
       <main
         css={css`
           max-width: 60rem;
-          margin: 3rem auto;
+          margin: auto;
           border-radius: 40px;
           background-color: ${theme.colors.grayscaleWhite};
         `}>
@@ -18,7 +18,7 @@ const PostLayout: FC<PropsWithChildren> = ({children}) => {
             display: flex;
             flex-direction: column;
             align-items: center;
-            row-gap: 1rem;
+            row-gap: 2rem;
             padding: 1.5rem;
             margin: 0 auto;
             max-width: 48rem;

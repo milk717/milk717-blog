@@ -27,8 +27,7 @@ export const Header = () => {
           align-items: center;
           padding: 1rem 1.5rem;
           background-color: ${theme.colors.grayscaleWhite};
-          border-radius: 1rem;
-          opacity: 1;
+          border-radius: 0 0 1rem 1rem;
           width: 100%;
         `}>
         <Typography

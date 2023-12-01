@@ -24,10 +24,14 @@ const Layout: FC<PropsWithChildren> = ({children}) => {
           display: flex;
           flex-direction: column;
           row-gap: ${theme.size.areaGap};
-          padding: ${theme.size.areaGap};
         `}>
         <Header />
-        {children}
+        <div
+          css={css`
+            padding: 0 ${theme.size.areaGap};
+          `}>
+          {children}
+        </div>
       </div>
     </ThemeProvider>
   );
