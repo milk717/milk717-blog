@@ -6,7 +6,7 @@ category: "개발 공부 기록"
 tags:
   - "Javascript"
   - "정규표현식"
-thumbnail: "./thumbnail.png"
+thumbnail: "./images/thumbnail.png"
 ---
 
 # 정규표현식 Tips
@@ -182,11 +182,11 @@ console.log(str.match(regExp)) //[ 'sumin', index: 11, input: 'My name is sumin'
 
 패턴을 그룹화하기 위해서는 괄호로 묶어주어야 합니다. 이렇게 괄호로 그룹화된 배턴은 하나의 단위로 취급됩니다. 아래 예시를 통해 살펴보겠습니다.
 
-![group.png](group.png)
+![그룹화가 적용된 경우](images/group.png)
 
 이렇게 그룹화한 패턴은 하나의 단위처럼 취급할 수 있습니다. 만약 위의 예시에서 그룹화가 없다면 어떻게 되었을까요?
 
-![non-group.png](non-group.png)
+![그룹화가 적용되지 않았을 경우](images/non-group.png)
 
 그룹화가 없었다면 abc가 하나의 단위로 취급되지 않고, 각자 따로따로 분리되기 때문에 c 단어만 반복 처리 돼서 abcccc라는 문자도 매칭됩니다.
 
