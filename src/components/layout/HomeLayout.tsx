@@ -57,7 +57,7 @@ const HomeLayout: FC<PropsWithChildren> = ({children}) => {
             <div
               css={css`
                 position: sticky;
-                top: ${theme.size.areaGap};
+                top: calc(${theme.size.areaGap} * 4);
                 display: flex;
                 flex-direction: column;
                 row-gap: ${theme.size.areaGap};

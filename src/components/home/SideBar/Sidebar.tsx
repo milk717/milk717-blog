@@ -13,7 +13,7 @@ export const Sidebar: React.FC<Props> = ({onTagFilterClick}) => {
     <div
       css={css`
         position: sticky;
-        top: ${theme.size.areaGap};
+        top: calc(${theme.size.areaGap} * 4);
         display: grid;
         grid-template-columns: 1fr;
         row-gap: ${theme.size.areaGap};
