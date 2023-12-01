@@ -18,6 +18,7 @@ thumbnail: "./images/thumbnail.png"
 이 글에서는 곰터뷰 서비스에 백엔드 인증, 인가 구글 로그인을 도입하면서 겪었던 이슈와 이에 대한 해결 과정에 대해 담고 있습니다. 정말 많이 고생했던 것에 비해 내용 자체는 어렵지 않으니 재미있게 읽어주시길 바랍니다!
 
 # 리다이랙션 url 이슈
+> [!note]
 > 나중에 겪은 이슈에 비하면 이건 이슈도 아님!
 ## 발생한 문제
 ![백엔드 인증, 인가 로그인 플로우](images/img-1.png)
@@ -119,3 +120,7 @@ nginx 프록시에서 쿠키 도메인을 변경해주더라도 리다이랙션 
 거창하게 고민한 것에 비해 간단한 방법으로 문제를 해결하게 돼서 약간 허무한 감도 있지만, 해결책을 찾는 과정동안 정말 머리를 싸매며 몰두하게 돼서 재밌기도 했습니다. 이제 누가 제게 쿠키에 대해 묻는다면 아주 당당하게 설명해줄 자신감이 생겼습니다!! 
 
 > 제 2주간의 고민으로는 현재 방법이 최선의 해결책이라고 생각합니다! 하지만 이보다 더 나은 해결책이 있거나 궁금한 내용이 있으시면 언제든지 댓글로 피드백 부탁드립니다😊
+
+##### 관련 PR
+- [[NDD-130] 구글 로그인 구현하기, router loader를 통해 리다이랙션 처리하기 (10h/3h) by milk717 · Pull Request #45 · boostcampwm2023/web14-gomterview · GitHub](https://github.com/boostcampwm2023/web14-gomterview/pull/45)
+- [[NDD-242] 🎉경축 DX 개선!! 드디어 골칫덩어리 쿠키를 물리쳤다🎉 (1h/2h) by milk717 · Pull Request #108 · boostcampwm2023/web14-gomterview · GitHub](https://github.com/boostcampwm2023/web14-gomterview/pull/108)
