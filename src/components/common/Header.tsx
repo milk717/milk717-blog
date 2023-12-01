@@ -30,14 +30,19 @@ export const Header = () => {
           border-radius: 0 0 1rem 1rem;
           width: 100%;
         `}>
-        <Typography
-          variant="h1"
-          css={css`
-            font-size: 1.4rem;
-            margin: 0;
-          `}>
-          Milk717
-        </Typography>
+        <Link to="/">
+          <Typography
+            variant="h1"
+            css={css`
+              font-size: 1.4rem;
+              margin: 0;
+              &:hover {
+                text-decoration: underline;
+              }
+            `}>
+            Milk717
+          </Typography>
+        </Link>
         <div
           css={css`
             display: flex;
