@@ -3,8 +3,10 @@ import Typography from './Typography/Typography';
 import {theme} from '../../styles/theme';
 import {Box} from './Box';
 import {Link} from 'gatsby';
+import {useLocation} from '@reach/router';
 
 export const Header = () => {
+  const location = useLocation();
   const menuItems = [
     {path: '/', label: 'Home'},
     // {path: '/category/', label: 'Categories'},
