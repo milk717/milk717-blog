@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {ChangeEventHandler} from 'react';
 import {Box} from '../../common/Box';
 import {css} from '@emotion/react';
 import {SearchIcon} from '../../../icons/SearchIcon';
 
-export const Search = () => {
+type Props = {
+  onSearchValueChanged: ChangeEventHandler<HTMLInputElement>;
+};
+export const Search: React.FC<Props> = ({onSearchValueChanged}) => {
   return (
     <Box
       style={css`
@@ -18,6 +21,7 @@ export const Search = () => {
       <input
         type="text"
         placeholder="Search..."
+        onChange={onSearchValueChanged}
         css={css`
           border: none;
           font-size: 1.125rem;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState} from 'react';
+import {ChangeEventHandler, useState} from 'react';
 import type {HeadFC, PageProps} from 'gatsby';
 import {graphql} from 'gatsby';
 import HomeLayout from '../components/layout/HomeLayout';
@@ -8,20 +8,36 @@ import {HomeContent} from '../components/home/HomeContent';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
   const [selectedTag, setSelectedTag] = useState('');
+  const [searchValue, setSearchValue] = useState('');
 
-  const filteredPosts = data.allMdx.edges.filter(
-    edge =>
-      selectedTag === '' || edge.node.frontmatter?.tags?.includes(selectedTag),
-  );
+  const filteredPosts = data.allMdx.edges.filter(edge => {
+    const post = edge.node;
+    const isTagMatched =
+      selectedTag === '' || post.frontmatter?.tags?.includes(selectedTag);
+    const isSearchMatched =
+      searchValue === '' ||
+      post.frontmatter?.title
+        ?.toLowerCase()
+        .includes(searchValue.toLowerCase());
+
+    return isTagMatched && isSearchMatched;
+  });
 
   const handleTagFilterClick = (tags: string) => {
     setSelectedTag(tags);
   };
 
+  const handleSearchValueChanged: ChangeEventHandler<HTMLInputElement> = e => {
+    setSearchValue(e.target.value);
+  };
+
   return (
     <HomeLayout>
-      <Sidebar onTagFilterClick={handleTagFilterClick} />
-      <HomeContent data={filteredPosts} />
+      <Sidebar
+        onTagFilterClick={handleTagFilterClick}
+        onSearchValueChanged={handleSearchValueChanged}
+      />
+      <HomeContent data={filteredPosts.length ? filteredPosts : undefined} />
     </HomeLayout>
   );
 };

@@ -16,12 +16,18 @@ const HomeLayout: FC<PropsWithChildren> = ({children}) => {
             flex-direction: column;
           }
         `}>
-        <aside>{childrenArray.at(0)}</aside>
+        <aside
+          css={css`
+            flex-basis: 16rem;
+          `}>
+          {childrenArray.at(0)}
+        </aside>
         <main
           css={css`
             display: flex;
             gap: ${theme.size.areaGap};
-            max-width: 48rem;
+            flex-basis: 40rem;
+            max-width: 40rem;
           `}>
           <section>{childrenArray.at(1)}</section>
           {/*<section>*/}

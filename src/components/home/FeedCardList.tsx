@@ -18,7 +18,7 @@ const FeedCardList = ({
         flex-direction: column;
         row-gap: ${theme.size.areaGap};
       `}>
-      {posts?.map(({node}) => (
+      {posts.map(({node}) => (
         <Link
           key={node.id}
           to={node.frontmatter?.slug ?? '/404'}
