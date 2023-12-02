@@ -26,6 +26,9 @@ export const Search: React.FC<Props> = ({onSearchValueChanged}) => {
           border: none;
           font-size: 1.125rem;
           background: none;
+          &:focus {
+            outline: none;
+          }
         `}
       />
     </Box>
