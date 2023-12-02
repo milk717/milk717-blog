@@ -40,7 +40,7 @@ export const Callout: React.FC<HTMLAttributes<HTMLElement>> = ({...args}) => {
 
     if (!isCallOutType(calloutType)) return;
 
-    const calloutChildren = calloutContentArray.slice(1) as ReactNode;
+    const calloutChildren = calloutContentArray.slice(1).join('\n');
     return CALLOUT_TYPE[calloutType](calloutChildren);
   };
 
