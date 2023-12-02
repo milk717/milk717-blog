@@ -31,7 +31,9 @@ export const ErrorCallout: React.FC<
         <BombIcon />
         Error
       </Typography>
-      <blockquote {...args}>{children}</blockquote>
+      <blockquote {...args}>
+        <Typography>{children}</Typography>
+      </blockquote>
     </div>
   );
 };

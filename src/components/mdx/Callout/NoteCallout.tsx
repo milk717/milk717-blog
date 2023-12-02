@@ -31,7 +31,9 @@ export const NoteCallout: React.FC<
         <EditIcon />
         Note
       </Typography>
-      <blockquote {...args}>{children}</blockquote>
+      <blockquote {...args}>
+        <Typography>{children}</Typography>
+      </blockquote>
     </div>
   );
 };

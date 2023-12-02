@@ -1,12 +1,12 @@
-import {HTMLAttributes} from 'react';
+import {HTMLAttributes, PropsWithChildren} from 'react';
 import {theme} from '../../../styles/theme';
 import Typography from '../../common/Typography/Typography';
 import {css} from '@emotion/react';
 import {WarningIcon} from '../../../icons/WarningIcon';
 
-export const WarningCallout: React.FC<HTMLAttributes<HTMLElement>> = ({
-  ...args
-}) => {
+export const WarningCallout: React.FC<
+  HTMLAttributes<HTMLElement> & PropsWithChildren
+> = ({children, ...args}) => {
   return (
     <div
       css={css`
@@ -31,7 +31,9 @@ export const WarningCallout: React.FC<HTMLAttributes<HTMLElement>> = ({
         <WarningIcon />
         Warning
       </Typography>
-      <blockquote {...args}>{args.children}</blockquote>
+      <blockquote {...args}>
+        <Typography>{children}</Typography>
+      </blockquote>
     </div>
   );
 };
