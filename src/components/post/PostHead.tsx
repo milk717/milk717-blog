@@ -59,6 +59,7 @@ const PostHead: React.FC<PostHeadParam> = ({title, category, tags, date}) => {
         `}>
         {tags?.map(tag => (
           <Typography
+            key={tag}
             component="span"
             variant="weak"
             css={css`
