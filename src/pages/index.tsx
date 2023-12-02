@@ -18,7 +18,7 @@ const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
       searchValue === '' ||
       post.frontmatter?.title
         ?.toLowerCase()
-        .includes(searchValue.toLowerCase());
+        .includes(searchValue.slice(0, -1).toLowerCase());
 
     return isTagMatched && isSearchMatched;
   });
