@@ -1,4 +1,4 @@
-import {HTMLAttributes, ReactNode} from 'react';
+import React, {HTMLAttributes, ReactNode} from 'react';
 import {EmotionJSX} from '@emotion/react/types/jsx-namespace';
 import {InfoCallout} from './InfoCallout';
 import {TipCallout} from './TipCallout';
@@ -25,21 +25,24 @@ export const Callout: React.FC<HTMLAttributes<HTMLElement>> = ({...args}) => {
     ),
   };
 
-  const isCallOutType = (str: string): str is keyof typeof CALLOUT_TYPE => {
-    return CALLOUT_TYPE.hasOwnProperty(str);
+  const isCallOutType = (str?: string): str is keyof typeof CALLOUT_TYPE => {
+    return str ? CALLOUT_TYPE.hasOwnProperty(str) : false;
   };
 
   const calloutComponent = (): EmotionJSX.Element | undefined => {
     if (!Array.isArray(args.children)) return;
 
-    const calloutContent = args.children.at(1).props.children.split('\n');
-    const calloutType = calloutContent.at(0);
+    const calloutContent = args.children.at(1).props.children;
+    if (!(typeof calloutContent === 'string')) return;
 
-    if (!isCallOutType(calloutType)) return <NoteCallout {...args} />;
+    const calloutContentArray = calloutContent.split('\n');
+    const calloutType = calloutContentArray.at(0);
 
-    const calloutChildren = calloutContent.slice(1) as ReactNode;
+    if (!isCallOutType(calloutType)) return;
+
+    const calloutChildren = calloutContentArray.slice(1) as ReactNode;
     return CALLOUT_TYPE[calloutType](calloutChildren);
   };
 
-  return calloutComponent();
+  return calloutComponent() ?? <NoteCallout {...args} />;
 };
