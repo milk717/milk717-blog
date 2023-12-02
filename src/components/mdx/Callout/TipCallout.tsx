@@ -4,7 +4,7 @@ import Typography from '../../common/Typography/Typography';
 import {css} from '@emotion/react';
 import {TipsIcon} from '../../../icons/TipsIcon';
 
-export const TipsCallout: React.FC<HTMLAttributes<HTMLElement>> = ({
+export const TipCallout: React.FC<HTMLAttributes<HTMLElement>> = ({
   ...args
 }) => {
   return (

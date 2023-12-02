@@ -1,7 +1,7 @@
 import {HTMLAttributes, ReactNode} from 'react';
 import {EmotionJSX} from '@emotion/react/types/jsx-namespace';
 import {InfoCallout} from './InfoCallout';
-import {TipsCallout} from './TipsCallout';
+import {TipCallout} from './TipCallout';
 import {ErrorCallout} from './ErrorCallout';
 import {WarningCallout} from './WarningCallout';
 import {NoteCallout} from './NoteCallout';
@@ -17,8 +17,8 @@ export const Callout: React.FC<HTMLAttributes<HTMLElement>> = ({...args}) => {
     '[!error]': (children: ReactNode) => (
       <ErrorCallout {...args}>{children}</ErrorCallout>
     ),
-    '[!tips]': (children: ReactNode) => (
-      <TipsCallout {...args}>{children}</TipsCallout>
+    '[!tip]': (children: ReactNode) => (
+      <TipCallout {...args}>{children}</TipCallout>
     ),
     '[!note]': (children: ReactNode) => (
       <NoteCallout {...args}>{children}</NoteCallout>
