@@ -3,15 +3,17 @@ import {Box} from '../../common/Box';
 import {css} from '@emotion/react';
 import Typography from '../../common/Typography/Typography';
 import {ArrowDownIcon} from '../../../icons/ArrowDownIcon';
-import {SyntheticEvent, useState} from 'react';
+import {SyntheticEvent, useEffect, useState} from 'react';
 import {HashTagIcon} from '../../../icons/HashTagIcon';
 import {theme} from '../../../styles/theme';
+import useWindowWidth from '../../../hooks/useWindowWidth';
 
 type Props = {
   selectedTag: string;
   onClick: (tags: string) => void;
 };
 export const TagDropdown: React.FC<Props> = ({selectedTag, onClick}) => {
+  const windowWidth = useWindowWidth();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const list = useStaticQuery(graphql`
     query BlogTagsList {
@@ -26,6 +28,13 @@ export const TagDropdown: React.FC<Props> = ({selectedTag, onClick}) => {
     (a: {subText: number}, b: {subText: number}) => b.subText - a.subText,
   );
 
+  const isHigherThanTablet =
+    windowWidth >= Number(theme.breakpoints.tablet.replace('px', ''));
+
+  useEffect(() => {
+    setIsDropdownOpen(isHigherThanTablet);
+  }, [windowWidth]);
+
   const handleDropdownOpen = () => {
     setIsDropdownOpen(prev => !prev);
   };
@@ -37,7 +46,7 @@ export const TagDropdown: React.FC<Props> = ({selectedTag, onClick}) => {
 
   return (
     <Box
-      onClick={handleDropdownOpen}
+      onClick={() => !isHigherThanTablet && handleDropdownOpen()}
       style={css`
         display: flex;
         flex-direction: column;
