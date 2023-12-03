@@ -7,13 +7,13 @@ import {Sidebar} from '../components/home/SideBar/Sidebar';
 import {HomeContent} from '../components/home/HomeContent';
 
 const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
-  const [selectedTag, setSelectedTag] = useState('');
+  const [selectedTag, setSelectedTag] = useState('All');
   const [searchValue, setSearchValue] = useState('');
 
   const filteredPosts = data.allMdx.edges.filter(edge => {
     const post = edge.node;
     const isTagMatched =
-      selectedTag === '' || post.frontmatter?.tags?.includes(selectedTag);
+      selectedTag === 'All' || post.frontmatter?.tags?.includes(selectedTag);
     const isSearchMatched =
       searchValue === '' ||
       post.frontmatter?.title
@@ -34,6 +34,7 @@ const IndexPage = ({data}: PageProps<Queries.BlogPostListQuery>) => {
   return (
     <HomeLayout>
       <Sidebar
+        selectedTag={selectedTag}
         onTagFilterClick={handleTagFilterClick}
         onSearchValueChanged={handleSearchValueChanged}
       />

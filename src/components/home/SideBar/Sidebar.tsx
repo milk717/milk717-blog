@@ -3,13 +3,15 @@ import {theme} from '../../../styles/theme';
 import {Profile} from './Profile';
 import {Search} from './Search';
 import React, {ChangeEventHandler} from 'react';
-import {TagListBox} from './TagListBox';
+import {TagDropdown} from './TagDropdown';
 
 type Props = {
+  selectedTag: string;
   onTagFilterClick: (tags: string) => void;
   onSearchValueChanged: ChangeEventHandler<HTMLInputElement>;
 };
 export const Sidebar: React.FC<Props> = ({
+  selectedTag,
   onTagFilterClick,
   onSearchValueChanged,
 }) => {
@@ -25,7 +27,8 @@ export const Sidebar: React.FC<Props> = ({
       `}>
       <Profile />
       <Search onSearchValueChanged={onSearchValueChanged} />
-      <TagListBox onClick={onTagFilterClick} />
+      {/*<TagDesktop onClick={onTagFilterClick} />*/}
+      <TagDropdown selectedTag={selectedTag} onClick={onTagFilterClick} />
     </div>
   );
 };

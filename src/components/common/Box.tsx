@@ -1,13 +1,13 @@
-import React, {ReactNode} from 'react';
+import React, {HTMLAttributes, ReactNode} from 'react';
 import {css, Interpolation, Theme, useTheme} from '@emotion/react';
 import {ThemeType} from '../../styles/theme';
 
 type Props = {
   children: ReactNode;
   style?: Interpolation<Theme>;
-};
+} & HTMLAttributes<HTMLDivElement>;
 
-export const Box: React.FC<Props> = ({children, style}) => {
+export const Box: React.FC<Props> = ({children, style, ...args}) => {
   const theme = useTheme() as ThemeType;
   return (
     <div
@@ -19,7 +19,8 @@ export const Box: React.FC<Props> = ({children, style}) => {
           box-shadow: ${theme.shadows.surface};
         `,
         style,
-      ]}>
+      ]}
+      {...args}>
       {children}
     </div>
   );
