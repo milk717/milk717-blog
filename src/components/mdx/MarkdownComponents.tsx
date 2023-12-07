@@ -119,7 +119,7 @@ const components = {
     <img
       {...props}
       css={css`
-        max-width: 800px;
+        width: 100%;
       `}
     />
   ),
