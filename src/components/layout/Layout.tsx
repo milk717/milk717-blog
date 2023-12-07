@@ -24,6 +24,7 @@ const Layout: FC<PropsWithChildren> = ({children}) => {
           display: flex;
           flex-direction: column;
           row-gap: ${theme.size.areaGap};
+          padding-bottom: ${theme.size.areaGap};
         `}>
         <Header />
         <div
