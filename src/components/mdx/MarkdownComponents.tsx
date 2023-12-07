@@ -115,6 +115,14 @@ const components = {
     </code>
   ),
   blockquote: (props: HTMLAttributes<HTMLElement>) => <Callout {...props} />,
+  img: (props: HTMLAttributes<HTMLImageElement>) => (
+    <img
+      {...props}
+      css={css`
+        max-width: 800px;
+      `}
+    />
+  ),
 };
 
 const MarkdownComponents: React.FC<PropsWithChildren> = ({children}) => {
