@@ -1548,6 +1548,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:7.14.0":
+  version: 7.14.0
+  resolution: "@babel/runtime@npm:7.14.0"
+  dependencies:
+    regenerator-runtime: "npm:^0.13.4"
+  checksum: 27ba256f339682dae407ee76736e2e5854dbebb2eaef18e2a443b1a7554ab47aef6dea41cbe3957750e898d64cc08426d1730d94cf173a0da5ff559e103bd51f
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.23.2
   resolution: "@babel/runtime@npm:7.23.2"
@@ -7766,6 +7775,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:10.0.1":
+  version: 10.0.1
+  resolution: "fs-extra@npm:10.0.1"
+  dependencies:
+    graceful-fs: "npm:^4.2.0"
+    jsonfile: "npm:^6.0.1"
+    universalify: "npm:^2.0.0"
+  checksum: d8e0d70a7bfdb669619a5e91231fb91034f3ad6033910844571a39190b29708f652640db86d83ca5add8b013e5886a2fa81aba9754962ae2f5d730275ce426af
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^11.1.1":
   version: 11.1.1
   resolution: "fs-extra@npm:11.1.1"
@@ -8015,6 +8035,22 @@ __metadata:
   peerDependencies:
     "@parcel/core": ^2.0.0
   checksum: 733dba7c7c5c50f6989ceca0cc168f99ec7eb4f510365872b7c8451fd421d238df453cb367e339aaa383776ad2bf6089c9b9622bdd58c0f1df100de1a13f6fc7
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-advanced-sitemap@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "gatsby-plugin-advanced-sitemap@npm:2.1.0"
+  dependencies:
+    "@babel/runtime": "npm:7.14.0"
+    fs-extra: "npm:10.0.1"
+    lodash: "npm:4.17.21"
+    moment: "npm:2.29.1"
+    pify: "npm:5.0.0"
+    xml: "npm:^1.0.1"
+  peerDependencies:
+    gatsby: ^3.0.0 || ^4.0.0
+  checksum: a948f814b55e30d8341a0ec1cb1a5c3fda86a65dda68e7f81f5e39a9ee81e524407d1902644c7f12ce27dc81776ef404ef8e25043c5f75ab3c683391346169f2
   languageName: node
   linkType: hard
 
@@ -10737,7 +10773,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:~4.17.0":
+"lodash@npm:4.17.21, lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:~4.17.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -12243,6 +12279,7 @@ __metadata:
     dotenv: "npm:^16.3.1"
     gatsby: "npm:^5.12.4"
     gatsby-link: "npm:^5.12.0"
+    gatsby-plugin-advanced-sitemap: "npm:^2.1.0"
     gatsby-plugin-emotion: "npm:^8.12.0"
     gatsby-plugin-google-gtag: "npm:^5.12.1"
     gatsby-plugin-image: "npm:^3.12.1"
@@ -12486,6 +12523,13 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: 46ea0f3ffa8bc6a5bc0c7081ffc3907777f0ed6516888d40a518c5111f8366d97d2678911ad1a6882bf592fa9de6c784fea32e1687bb94e1f4944170af48a5cf
+  languageName: node
+  linkType: hard
+
+"moment@npm:2.29.1":
+  version: 2.29.1
+  resolution: "moment@npm:2.29.1"
+  checksum: 2617e383c0e0f910696214d026b9742173ea1916775d2023b39fd7d5fc3fae694f67c17876d154e246b139ad2a8028c42b2898c66cd665316b61c18453a5103f
   languageName: node
   linkType: hard
 
@@ -13505,6 +13549,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pify@npm:5.0.0":
+  version: 5.0.0
+  resolution: "pify@npm:5.0.0"
+  checksum: 9f6f3cd1f159652692f514383efe401a06473af35a699962230ad1c4c9796df5999961461fc1a3b81eed8e3e74adb8bd032474fb3f93eb6bdbd9f33328da1ed2
+  languageName: node
+  linkType: hard
+
 "pify@npm:^2.0.0":
   version: 2.3.0
   resolution: "pify@npm:2.3.0"
@@ -14477,7 +14528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.7":
+"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
   version: 0.13.11
   resolution: "regenerator-runtime@npm:0.13.11"
   checksum: 12b069dc774001fbb0014f6a28f11c09ebfe3c0d984d88c9bced77fdb6fedbacbca434d24da9ae9371bfbf23f754869307fb51a4c98a8b8b18e5ef748677ca24
@@ -17495,6 +17546,13 @@ __metadata:
   version: 4.0.0
   resolution: "xdg-basedir@npm:4.0.0"
   checksum: 1b5d70d58355af90363a4e0a51c992e77fc5a1d8de5822699c7d6e96a6afea9a1e048cb93312be6870f338ca45ebe97f000425028fa149c1e87d1b5b8b212a06
+  languageName: node
+  linkType: hard
+
+"xml@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "xml@npm:1.0.1"
+  checksum: 04bcc9b8b5e7b49392072fbd9c6b0f0958bd8e8f8606fee460318e43991349a68cbc5384038d179ff15aef7d222285f69ca0f067f53d071084eb14c7fdb30411
   languageName: node
   linkType: hard
 

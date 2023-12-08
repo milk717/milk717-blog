@@ -23,6 +23,7 @@ const config: GatsbyConfig = {
         head: true,
       },
     },
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
