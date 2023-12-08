@@ -25,6 +25,14 @@ const config: GatsbyConfig = {
     },
     `gatsby-plugin-advanced-sitemap`,
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: `https://www.milk717.com`,
+        sitemap: `https://www.milk717.com/sitemap.xml`,
+        policy: [{userAgent: '*', allow: '/'}],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Milk717의 개발 블로그 입니다.`,

@@ -11,6 +11,7 @@ const BlogPostTemplate = ({
   children,
 }: PageProps<Queries.BlogPostQuery>) => {
   const {title, category, tags, date} = data.mdx?.frontmatter!;
+
   return (
     <PostLayout>
       <PostHead title={title} category={category} tags={tags} date={date} />
