@@ -18,19 +18,25 @@ const useCallout = ({
   const getCalloutText = (str: string) => {
     const pattern = `^\\s*\\[!(${calloutOptions.join('|')})]`;
     const regex = new RegExp(pattern);
-    return (str.match(regex)?.at(1) as CalloutOption) || 'note';
+    return str.match(regex)?.at(1) as CalloutOption;
   };
 
   if (!isArrayReactElement(children)) return {type: 'note', children: children};
   const reactElementArray = filterReactElement(children);
 
   const newChildren = reactElementArray.map(element => {
-    if (typeof element.type === 'function' && element.type.name === 'p') {
-      const [type, ...str] = element.props.children.split('\n');
+    if (
+      typeof element.type === 'function' &&
+      typeof element.props.children === 'string' &&
+      element.type.name === 'p'
+    ) {
+      const [type, ...str] = element?.props?.children?.split('\n');
 
       if (!calloutType) {
         calloutType = getCalloutText(type);
-        return {...element, props: {children: str.join('\n')}};
+        return calloutType
+          ? {...element, props: {children: str.join('\n')}}
+          : element;
       }
     }
     return element;
