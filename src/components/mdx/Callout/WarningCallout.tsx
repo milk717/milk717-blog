@@ -31,9 +31,7 @@ export const WarningCallout: React.FC<
         <WarningIcon />
         Warning
       </Typography>
-      <blockquote {...args}>
-        <Typography>{children}</Typography>
-      </blockquote>
+      <blockquote {...args}>{children}</blockquote>
     </div>
   );
 };

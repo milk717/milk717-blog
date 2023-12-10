@@ -31,9 +31,7 @@ export const TipCallout: React.FC<
         <TipsIcon />
         Tips
       </Typography>
-      <blockquote {...args}>
-        <Typography>{children}</Typography>
-      </blockquote>
+      <blockquote {...args}>{children}</blockquote>
     </div>
   );
 };

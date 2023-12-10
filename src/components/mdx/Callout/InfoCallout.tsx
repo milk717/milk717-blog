@@ -31,9 +31,7 @@ export const InfoCallout: React.FC<
         <InfoIcon />
         Info
       </Typography>
-      <blockquote {...args}>
-        <Typography>{children}</Typography>
-      </blockquote>
+      <blockquote {...args}>{children}</blockquote>
     </div>
   );
 };
