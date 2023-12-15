@@ -115,16 +115,6 @@ const components = {
     </code>
   ),
   blockquote: (props: HTMLAttributes<HTMLElement>) => <Callout {...props} />,
-  // blockquote: (props: HTMLAttributes<HTMLElement>) => (
-  //   <blockquote
-  //     {...props}
-  //     css={css`
-  //       background-color: #8e8e90;
-  //       margin: 1rem 0;
-  //     `}>
-  //     {props.children}
-  //   </blockquote>
-  // ),
   img: (props: HTMLAttributes<HTMLImageElement>) => (
     <img
       {...props}
