@@ -11,7 +11,7 @@ thumbnail: "../thumbnails/programmers-level2.png"
 
 # 문제 살펴보기
 
-> 문제 설명은 아래 링크를 참고해주세요!  
+> 문제 설명은 아래 링크를 참고해주세요!
 > [프로그래머스 > 코딩테스트 연습 > 022 KAKAO BLIND RECRUITMENT > k진수에서 소수 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/92335#)
 
 문제를 읽어보면 굉장히 간단할 것 같다는 생각이 먼저 든다.  

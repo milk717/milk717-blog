@@ -11,7 +11,7 @@ thumbnail: "../thumbnails/programmers-level2.png"
 
 # 문제 살펴보기
 
-> 문제 설명은 아래 링크를 참고해주세요!  
+> 문제 설명은 아래 링크를 참고해주세요! 
 > [프로그래머스 > 코딩테스트 연습 > 월간 코드 챌린지 시즌3 > n^2 배열 자르기](https://school.programmers.co.kr/learn/courses/30/lessons/87390)
 
 ![blog.gif](blog.gif)  
