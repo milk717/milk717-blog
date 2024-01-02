@@ -90,7 +90,7 @@ const components = {
       component="a"
       variant="link"
       css={css`
-        display: inline-block;
+        display: inline;
         font-size: inherit;
         font-weight: inherit;
         margin: 0;
