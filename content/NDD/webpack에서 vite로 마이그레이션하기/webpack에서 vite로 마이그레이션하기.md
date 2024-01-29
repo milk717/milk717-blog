@@ -1,6 +1,6 @@
 ---
 slug: /gomterview-6
-date: 2023-01-29
+date: "2023-01-29"
 title: webpack에서 vite로 마이그레이션하기
 category: NDD
 tags:
