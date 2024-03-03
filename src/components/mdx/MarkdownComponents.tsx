@@ -5,7 +5,7 @@ import {MDXProvider} from '@mdx-js/react';
 import {css} from '@emotion/react';
 import 'prismjs/themes/prism-tomorrow.css';
 import Typography from '../common/Typography/Typography';
-import {Callout} from './Callout/Callout';
+import {ObsidianCallout} from 'obsidian-callouts-markdown';
 
 const components = {
   h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -114,7 +114,9 @@ const components = {
       {props.children}
     </code>
   ),
-  blockquote: (props: HTMLAttributes<HTMLElement>) => <Callout {...props} />,
+  blockquote: (props: HTMLAttributes<HTMLElement>) => (
+    <ObsidianCallout {...props} />
+  ),
   img: (props: HTMLAttributes<HTMLImageElement>) => (
     <img
       {...props}
