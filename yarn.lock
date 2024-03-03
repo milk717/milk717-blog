@@ -9725,10 +9725,10 @@ objectFitPolyfill@^2.3.5:
   resolved "https://registry.yarnpkg.com/objectFitPolyfill/-/objectFitPolyfill-2.3.5.tgz#be8c83064aabfa4e88780f776c2013c48ce1f745"
   integrity sha512-8Quz071ZmGi0QWEG4xB3Bv5Lpw6K0Uca87FLoLMKMWjB6qIq9IyBegP3b/VLNxv2WYvIMGoeUQ+c6ibUkNa8TA==
 
-obsidian-callouts-markdown@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/obsidian-callouts-markdown/-/obsidian-callouts-markdown-1.0.2.tgz#7a876bc8c1e46d175008de7efa49f345a2bf4331"
-  integrity sha512-pBT2JXNN3CTh0SIg3cNjRXepm/JDiAC7fhs1NpQREh4o5yyS+X1HWSxHEoIkxqFvHFZA9rxpkAH458BxHFy3MQ==
+obsidian-callouts-markdown@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/obsidian-callouts-markdown/-/obsidian-callouts-markdown-1.0.3.tgz#c0ff752b0a528fe37043cdcd90197ee42199e59f"
+  integrity sha512-4gnnuNEd2FtEapHTp6j+ZNxJMMo+WWS/T66dDz4DGCDdIK4lXio3tPXk+9HIlRd1ReN3cfLYfnduR1pEvn1Drw==
 
 on-finished@2.4.1:
   version "2.4.1"
